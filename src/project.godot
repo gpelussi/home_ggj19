@@ -19,6 +19,7 @@ config/icon="res://icon.png"
 Resolution="*res://Misc/Resolution.gd"
 Inventory="*res://Persistence/Inventory.tscn"
 Database="*res://Database/Database.tscn"
+Hud="*res://Hud/Hud.tscn"
 
 [debug]
 

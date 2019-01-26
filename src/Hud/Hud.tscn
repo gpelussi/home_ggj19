@@ -4,7 +4,7 @@
 
 [node name="Hud" type="CanvasLayer" index="0"]
 
-layer = 1
+layer = 32
 offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )

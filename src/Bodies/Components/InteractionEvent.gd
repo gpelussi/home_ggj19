@@ -1,9 +1,11 @@
 extends Node
 
-signal trigger_text
+signal trigger_dialogue
 
 onready var database = get_node("/root/Database")
 onready var inventory = get_node("/root/Inventory")
+
+onready var textbox = get_node("/root/Hud/TextBox")
 
 export(String) var first_needed_item = ""
 export(String) var second_needed_item = ""
@@ -21,6 +23,8 @@ var given_items = {}
 var texts = []
 
 func _ready():
+	# connect with hud
+	connect("trigger_dialogue", textbox, "on_trigger_dialogue")
 	# needed items
 	if not first_needed_item.empty():
 		needed_items.append(first_needed_item)
@@ -52,7 +56,7 @@ func try_to_trigger():
 	award_item()
 	var dialogue_text = get_current_text()
 	print(dialogue_text)
-	emit_signal("trigger_text", dialogue_text)
+	emit_signal("trigger_dialogue", dialogue_text)
 
 func award_item():
 	var index = inventory.get_npc_text(get_npc_name())
