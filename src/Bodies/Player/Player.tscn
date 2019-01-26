@@ -1,10 +1,19 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Bodies/Body.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Bodies/Components/Controls.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Bodies/Player/Sprite.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Bodies/Components/Interaction.tscn" type="PackedScene" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16, 12 )
 
 [node name="Player" index="0" instance=ExtResource( 1 )]
+
+collision_layer = 2
+_sections_unfolded = [ "Collision" ]
 
 [node name="HitBox" parent="." index="0"]
 
@@ -40,5 +49,16 @@ editor_draw_drag_margin = true
 _sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Offset", "Smoothing", "Visibility" ]
 
 [node name="Sprite" parent="." index="3" instance=ExtResource( 3 )]
+
+[node name="Interaction" parent="." index="4" instance=ExtResource( 4 )]
+
+collision_layer = 4
+collision_mask = 16
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction" index="1"]
+
+position = Vector2( 0, -12 )
+shape = SubResource( 1 )
 
 

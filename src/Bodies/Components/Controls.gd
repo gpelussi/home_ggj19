@@ -13,13 +13,8 @@ func _physics_process(delta):
 
 func _input(event):
 	if active:
-		if event.is_action_pressed("ACTION_A"):
-			print("CONFIRM")
-		elif event.is_action_pressed("ACTION_B"):
-			print("CANCEL")
-		elif event.is_action_pressed("ACTION_C"):
+		if event.is_action_pressed("ACTION_CONFIRM"):
+			if get_parent().has_node("Interaction"):
+				get_parent().get_node("Interaction").interact()
+		elif event.is_action_pressed("ACTION_JUMP"):
 			get_parent().jump()
-		elif event.is_action_pressed("ACTION_D"):
-			print("AUX")
-		elif event.is_action_pressed("ACTION_PAUSE"):
-			print("PAUSE")

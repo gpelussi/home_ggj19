@@ -1,10 +1,22 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Bodies/Body.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Bodies/Components/Interaction.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Bodies/Components/TalkIcon.tscn" type="PackedScene" id=3]
 
 [node name="NPC" index="0" instance=ExtResource( 1 )]
 
+collision_layer = 8
+_sections_unfolded = [ "Collision" ]
+
 [node name="Interaction" parent="." index="1" instance=ExtResource( 2 )]
+
+collision_layer = 16
+collision_mask = 4
+_sections_unfolded = [ "Collision" ]
+
+[node name="TalkIcon" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 0, -32 )
 
 

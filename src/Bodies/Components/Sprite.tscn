@@ -1,11 +1,10 @@
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Bodies/Components/Sprite.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Sprites/player-stand.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Sprites/player-walk.png" type="Texture" id=3]
-[ext_resource path="res://Assets/Sprites/player-jump.png" type="Texture" id=4]
-[ext_resource path="res://Assets/Sprites/player-chat.png" type="Texture" id=5]
-
+[ext_resource path="res://Assets/Sprites/player/player-stand.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Sprites/player/player-walk.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Sprites/player/player-jump.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Sprites/player/player-chat.png" type="Texture" id=5]
 
 [sub_resource type="Animation" id=1]
 
@@ -74,7 +73,7 @@ tracks/4/keys = {
 "values": [ 0, 1, 2, 3, 4, 5 ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 
 resource_name = "Jump"
 length = 0.48
@@ -141,7 +140,7 @@ tracks/4/keys = {
 "values": [ 0, 1, 2, 3, 4, 5 ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 
 resource_name = "Land"
 length = 0.08
@@ -208,7 +207,7 @@ tracks/4/keys = {
 "values": [ 1 ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=4]
 
 resource_name = "Talk"
 length = 0.48
@@ -275,9 +274,8 @@ tracks/4/keys = {
 "values": [ 0, 1, 2, 3, 4, 5 ]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=5]
 
-resource_name = "Walk"
 length = 0.48
 loop = true
 step = 0.08
@@ -349,6 +347,7 @@ _sections_unfolded = [ "Animation", "Offset" ]
 
 [node name="Idle" type="Sprite" parent="." index="0"]
 
+visible = false
 texture = ExtResource( 2 )
 offset = Vector2( 0, -13 )
 hframes = 6
@@ -360,9 +359,8 @@ _sections_unfolded = [ "Animation", "Offset", "Visibility" ]
 visible = false
 texture = ExtResource( 3 )
 offset = Vector2( 0, -13 )
-vframes = 3
-hframes = 2
-frame = 3
+hframes = 6
+frame = 1
 _sections_unfolded = [ "Animation", "Visibility" ]
 
 [node name="Jump" type="Sprite" parent="." index="2"]
@@ -371,16 +369,15 @@ visible = false
 texture = ExtResource( 4 )
 offset = Vector2( 0, -13 )
 hframes = 6
-frame = 1
+frame = 5
 _sections_unfolded = [ "Animation", "Material", "Visibility" ]
 
 [node name="Talk" type="Sprite" parent="." index="3"]
 
-visible = false
 texture = ExtResource( 5 )
 offset = Vector2( 0, -13 )
 hframes = 6
-frame = 4
+frame = 5
 _sections_unfolded = [ "Animation", "Visibility" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4"]
@@ -391,10 +388,10 @@ playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
 anims/Idle = SubResource( 1 )
-anims/Jump = SubResource( 3 )
-anims/Land = SubResource( 4 )
-anims/Talk = SubResource( 5 )
-anims/Walk = SubResource( 2 )
+anims/Jump = SubResource( 2 )
+anims/Land = SubResource( 3 )
+anims/Talk = SubResource( 4 )
+anims/Walk = SubResource( 5 )
 blend_times = [  ]
 
 

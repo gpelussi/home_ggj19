@@ -1,15 +1,20 @@
 extends "res://Persistence/Persistence.gd"
 
-const GIVEN_STRING = "%s_was_given_to"
+const NPC_INDEX_STRING = "%s_talk_index"
 
 func gain_item(item):
 	set_data(item, true)
 
+func lose_item(item):
+	set_data(item, false)
+
 func has_item(item):
 	return get_data(item)
 
-func give_item_to(item, to):
-	set_data(GIVEN_STRING % item, to)
-	
-func gave_item_to(item, to):
-	return get_data(GIVEN_STRING % item) == to
+func increase_npc_text(npc):
+	var npc_text = NPC_INDEX_STRING % npc
+	set_data(npc_text, get_data(npc_text, 0) + 1)
+
+func get_npc_text(npc):
+	var npc_text = NPC_INDEX_STRING % npc
+	return get_data(npc_text, 0)

@@ -18,6 +18,12 @@ var is_moving = false
 func _ready():
 	pass
 
+func _enter_tree():
+	add_to_group("Bodies")
+
+func _exit_tree():
+	remove_from_group("Bodies")
+
 func _physics_process(delta):
 	move_and_slide(velocity, Physics.UP)
 	accelerate_gravity()
