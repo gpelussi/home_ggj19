@@ -9,5 +9,5 @@ const BASE_SPEED = 24
 const DEACCELERATION = 0.8
 const EPSILON_SPEED = 1
 
-const JUMP_STRENGTH = 360
+const JUMP_STRENGTH = 288
 const GRAVITY = 64
