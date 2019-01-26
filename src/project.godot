@@ -17,8 +17,8 @@ config/icon="res://icon.png"
 [autoload]
 
 Resolution="*res://Misc/Resolution.gd"
-Database="*res://Database/Database.tscn"
 Inventory="*res://Persistence/Inventory.tscn"
+Database="*res://Database/Database.tscn"
 
 [debug]
 

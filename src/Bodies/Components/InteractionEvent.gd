@@ -2,8 +2,8 @@ extends Node
 
 signal trigger_text
 
-onready var database = get_node("/Database")
-onready var inventory = get_node("/Inventory")
+onready var database = get_node("/root/Database")
+onready var inventory = get_node("/root/Inventory")
 
 export(PoolStringArray) var items_needed = PoolStringArray()
 export(String, MULTILINE) var text_before_giving_item
