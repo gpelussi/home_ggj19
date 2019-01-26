@@ -9,7 +9,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 16, 16 )
 
-[node name="Cthulu" instance=ExtResource( 1 )]
+[node name="Cthulu" index="0" instance=ExtResource( 1 )]
 
 [node name="HitBox" parent="." index="0"]
 
@@ -22,11 +22,10 @@ shape = SubResource( 1 )
 
 [node name="InteractionEvent" parent="Interaction" index="1" instance=ExtResource( 2 )]
 
-first_needed_item = ""
-second_needed_item = ""
 text_default = "ASKJDLAFKJ"
-text_alt_1 = ""
-text_alt_2 = ""
+item_given_on_first_text = "Chainsaw"
+item_given_on_second_text = ""
+item_given_on_third_text = ""
 
 [node name="Sprite" parent="." index="2" instance=ExtResource( 3 )]
 
