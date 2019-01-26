@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 
 func item_exists(item):
 	return has_node(item)

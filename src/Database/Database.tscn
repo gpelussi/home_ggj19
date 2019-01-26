@@ -3,8 +3,9 @@
 [ext_resource path="res://Database/Database.gd" type="Script" id=1]
 [ext_resource path="res://Database/Items/SampleItem.tscn" type="PackedScene" id=2]
 
-[node name="Database" type="Node" index="0"]
+[node name="Database" type="Node2D" index="0"]
 
+visible = false
 script = ExtResource( 1 )
 
 [node name="SampleItem" parent="." index="0" instance=ExtResource( 2 )]
