@@ -33,6 +33,6 @@ func set_land():
 
 func set_direction(direction):
 	if direction == "right":
-		self.scale.x = 1
-	elif direction == "left":
 		self.scale.x = -1
+	elif direction == "left":
+		self.scale.x = 1
