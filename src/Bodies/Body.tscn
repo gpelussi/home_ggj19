@@ -10,6 +10,6 @@ collision/safe_margin = 0.08
 [node name="HitBox" type="CollisionPolygon2D" parent="." index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( -16, -16, 16, -16, 16, 16, -16, 16 )
+polygon = PoolVector2Array(  )
 
 
