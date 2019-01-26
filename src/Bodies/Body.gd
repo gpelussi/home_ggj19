@@ -12,7 +12,7 @@ func _ready():
 
 func _physics_process(delta):
 	accelerate_gravity()
-	move_and_slide(velocity, Physics.NORMAL)
+	move_and_slide(velocity, Physics.UP)
 	check_floor()
 	deaccelerate()
 

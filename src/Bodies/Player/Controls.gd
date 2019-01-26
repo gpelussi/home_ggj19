@@ -1,17 +1,22 @@
 extends Node
 
+const Physics = preload("res://Bodies/Physics.gd")
+
 var active = true
 
 func _physics_process(delta):
+	var direction = Vector2()
 	if active:
 		if Input.is_action_pressed("DIR_UP"):
-			print("UP")
-		elif Input.is_action_pressed("DIR_RIGHT"):
-			print("RIGHT")
-		elif Input.is_action_pressed("DIR_DOWN"):
-			print("DOWN")
-		elif Input.is_action_pressed("DIR_LEFT"):
-			print("LEFT")
+			direction += Physics.UP
+		if Input.is_action_pressed("DIR_RIGHT"):
+			direction += Physics.RIGHT
+		if Input.is_action_pressed("DIR_DOWN"):
+			direction += Physics.DOWN
+		if Input.is_action_pressed("DIR_LEFT"):
+			direction += Physics.LEFT
+	if direction.length_squared() > 0:
+		get_parent().set_movement(direction)
 
 func _input(event):
 	if active:
