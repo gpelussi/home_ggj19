@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Bodies/Body.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Bodies/Player/Components/Sprite.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Bodies/Player/Components/Controls.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Bodies/Components/Controls.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Bodies/Player/Sprite.tscn" type="PackedScene" id=3]
 
 [node name="Player" index="0" instance=ExtResource( 1 )]
 
@@ -10,11 +10,9 @@
 
 polygon = PoolVector2Array( -8, -20, 0, -28, 8, -20, 8, -8, 0, 0, -8, -8 )
 
-[node name="Sprite" parent="." index="1" instance=ExtResource( 2 )]
+[node name="Controls" parent="." index="1" instance=ExtResource( 2 )]
 
-[node name="Controls" parent="." index="2" instance=ExtResource( 3 )]
-
-[node name="Camera" type="Camera2D" parent="." index="3"]
+[node name="Camera" type="Camera2D" parent="." index="2"]
 
 offset = Vector2( 0, -96 )
 anchor_mode = 1
@@ -40,5 +38,7 @@ editor_draw_screen = true
 editor_draw_limits = true
 editor_draw_drag_margin = true
 _sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Offset", "Smoothing", "Visibility" ]
+
+[node name="Sprite" parent="." index="3" instance=ExtResource( 3 )]
 
 

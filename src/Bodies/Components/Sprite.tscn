@@ -1,10 +1,11 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Bodies/Player/Components/Sprite.gd" type="Script" id=1]
+[ext_resource path="res://Bodies/Components/Sprite.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Sprites/player-stand.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Sprites/player-walk.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Sprites/player-jump.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Sprites/player-chat.png" type="Texture" id=5]
+
 
 [sub_resource type="Animation" id=1]
 
