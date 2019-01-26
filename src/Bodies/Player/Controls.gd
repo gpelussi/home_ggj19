@@ -5,14 +5,13 @@ const Physics = preload("res://Bodies/Physics.gd")
 var active = true
 
 func _physics_process(delta):
-	var direction = Vector2()
 	if active:
 		if Input.is_action_pressed("DIR_RIGHT"):
-			direction += Physics.RIGHT
+			get_parent().move_right()
 		if Input.is_action_pressed("DIR_LEFT"):
-			direction += Physics.LEFT
-	if direction.length_squared() > 0:
-		get_parent().set_movement(direction)
+			get_parent().move_left()
+		if Input.is_action_pressed("ACTION_C"):
+			get_parent().keep_jumping()
 
 func _input(event):
 	if active:
@@ -21,8 +20,9 @@ func _input(event):
 		elif event.is_action_pressed("ACTION_B"):
 			print("CANCEL")
 		elif event.is_action_pressed("ACTION_C"):
-			print("JUMP")
 			get_parent().jump()
+		elif event.is_action_released("ACTION_C"):
+			get_parent().stop_jumping()
 		elif event.is_action_pressed("ACTION_D"):
 			print("AUX")
 		elif event.is_action_pressed("ACTION_PAUSE"):

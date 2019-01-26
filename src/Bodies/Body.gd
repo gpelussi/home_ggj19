@@ -5,7 +5,7 @@ const Physics = preload("Physics.gd")
 signal landed_on_floor(position)
 
 var velocity = Vector2()
-var jump_phase = -1
+var vertical_acceleration = 0
 
 # OVERRIDE METHODS
 
@@ -20,30 +20,41 @@ func _physics_process(delta):
 
 # METHODS
 
-func set_movement(movement):
-	self.velocity += movement * Physics.BASE_SPEED
+func move_right():
+	self.velocity += Physics.RIGHT * Physics.BASE_SPEED
+
+func move_left():
+	self.velocity += Physics.LEFT * Physics.BASE_SPEED
 
 func jump():
-	if jump_phase >= 0:
-		if jump_phase == 0:
-			jump_phase = Physics.JUMP
-		self.velocity += Physics.UP * jump_phase
-		jump_phase *= 0.9
-		if jump_phase <= Physics.EPSILON_SPEED:
-			jump_phase = -1
+	if is_on_floor():
+		print("JUMPED")
+		vertical_acceleration = 1
+		self.velocity += Physics.UP * Physics.JUMP_STRENGTH * vertical_acceleration
+
+func keep_jumping():
+	if vertical_acceleration > 0 and not is_on_floor():
+		vertical_acceleration = vertical_acceleration * Physics.DEACCELERATION
+		self.velocity += Physics.UP * Physics.JUMP_STRENGTH * vertical_acceleration
+
+func stop_jumping():
+	vertical_acceleration = -1
 
 func accelerate_gravity():
 	if not is_on_floor():
 		self.velocity += Physics.DOWN * Physics.GRAVITY
 
 func check_floor():
-	if jump_phase != 0 and is_on_floor():
-		print("landed!")
-		jump_phase = 0
+	if vertical_acceleration != 0 and is_on_floor():
 		velocity.y = 0
+		vertical_acceleration = 0
+		print("LANDED")
 		emit_signal("landed_on_floor", self.position)
 
 func deaccelerate():
 	self.velocity *= Physics.DEACCELERATION
+	if vertical_acceleration > Physics.EPSILON_SPEED:
+		vertical_acceleration = 0
 	if self.velocity.length_squared() <= Physics.EPSILON_SPEED:
-		velocity *= 0
+		velocity.x = 0
+		velocity.y = 0

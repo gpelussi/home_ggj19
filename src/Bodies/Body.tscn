@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Bodies/Body.gd" type="Script" id=1]
 
-[node name="Body" type="KinematicBody2D"]
+[node name="Body" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
