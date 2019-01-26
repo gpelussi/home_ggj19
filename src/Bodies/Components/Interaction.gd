@@ -3,12 +3,9 @@ extends Area2D
 signal set_target
 signal unset_target
 
-var interaction_event
 var targets = []
 
 func _ready():
-	if has_node("InteractionEvent"):
-		interaction_event = get_node("InteractionEvent")
 	connect("area_entered", self, "on_area_entered")
 	connect("area_exited", self, "on_area_exited")
 
@@ -25,8 +22,12 @@ func on_area_exited(area):
 		targets.remove(idx)
 
 func get_target():
+	if targets.size() == 0:
+		return
 	return targets.back()
 
 func interact():
-	if interaction_event:
-		interaction_event.try_to_trigger()
+	var target = get_target()
+	if target:
+		if target.has_node("InteractionEvent"):
+			target.get_node("InteractionEvent").try_to_trigger()

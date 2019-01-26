@@ -3,7 +3,7 @@
 [ext_resource path="res://Bodies/NPCs/Cthulu/Cthulu.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Bodies/Player/Player.tscn" type="PackedScene" id=2]
 
-[node name="Sample" type="Node2D" index="0"]
+[node name="Sample" type="Node2D"]
 
 [node name="Platform1" type="Polygon2D" parent="." index="0"]
 
@@ -39,7 +39,7 @@ polygon = PoolVector2Array( 0, 192, 0, 0, 16, 0, 16, 192, 576, 192, 640, 176, 76
 
 [node name="Cthulu" parent="NPCs" index="0" instance=ExtResource( 1 )]
 
-position = Vector2( 320, 192 )
+position = Vector2( 288, 192 )
 
 [node name="Player" parent="." index="2" instance=ExtResource( 2 )]
 
