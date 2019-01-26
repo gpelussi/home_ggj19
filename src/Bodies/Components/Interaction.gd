@@ -30,4 +30,5 @@ func interact():
 	var target = get_target()
 	if target:
 		if target.has_node("InteractionEvent"):
+			get_parent().talk()
 			target.get_node("InteractionEvent").try_to_trigger()
