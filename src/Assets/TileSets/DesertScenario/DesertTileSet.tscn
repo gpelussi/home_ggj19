@@ -1,0 +1,126 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Sprites/DesertScenario/Tiles/chao.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 8, 8 )
+
+[node name="DesertTileSet" type="Node2D" index="0"]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="Floor1" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 16, 16 )
+_sections_unfolded = [ "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor1" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor1/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Floor2" type="Sprite" parent="." index="1"]
+
+position = Vector2( 16, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 16, 0, 16, 16 )
+_sections_unfolded = [ "Region", "Transform" ]
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Floor2" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Floor2/StaticBody2D2" index="0"]
+
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Underground1" type="Sprite" parent="." index="2"]
+
+position = Vector2( 0, 16 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 0, 16, 16 )
+_sections_unfolded = [ "Region", "Transform" ]
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Underground1" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Underground1/StaticBody2D3" index="0"]
+
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Underground2" type="Sprite" parent="." index="3"]
+
+position = Vector2( 16, 16 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 80, 0, 16, 16 )
+_sections_unfolded = [ "Region", "Transform" ]
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Underground2" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Underground2/StaticBody2D4" index="0"]
+
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Artifact" type="Sprite" parent="." index="4"]
+
+modulate = Color( 1, 1, 1, 0.564706 )
+position = Vector2( 0, 32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 0, 16, 16 )
+_sections_unfolded = [ "Region", "Transform" ]
+
+[node name="Artifact2" type="Sprite" parent="." index="5"]
+
+modulate = Color( 1, 1, 1, 0.564706 )
+position = Vector2( 16, 32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 48, 0, 16, 16 )
+_sections_unfolded = [ "Region", "Transform" ]
+
+
