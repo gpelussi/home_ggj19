@@ -1,2 +1,8 @@
+# MacOS
+.DS_Store
+
+# Godot
 .import
+
+# Vim
 *.swp
