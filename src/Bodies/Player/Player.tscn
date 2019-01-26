@@ -8,7 +8,7 @@
 
 [node name="HitBox" parent="." index="0"]
 
-polygon = PoolVector2Array( -8, -28, 8, -28, 8, 0, -8, 0 )
+polygon = PoolVector2Array( -8, -20, 0, -28, 8, -20, 8, -8, 0, 0, -8, -8 )
 
 [node name="Sprite" parent="." index="1" instance=ExtResource( 2 )]
 

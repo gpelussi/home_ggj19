@@ -11,7 +11,7 @@ func _ready():
 	# setup fullscreen preferences
 	if not screen_scale:
 		screen_scale = 2
-	update_resolution(screen_scale)
+	update_resolution(max(screen_scale, get_max_scale()))
 
 func _input(ev):
 	if ev.is_action_pressed("META_TOGGLE_SCALE"):
@@ -25,7 +25,6 @@ func get_scale():
 	return screen_scale
 
 func toggle_scale():
-	print(screen_scale, get_max_scale())
 	set_scale(int(screen_scale) % get_max_scale() + 1)
 
 func update_resolution(scale):

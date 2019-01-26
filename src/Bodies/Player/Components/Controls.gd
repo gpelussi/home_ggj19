@@ -10,8 +10,6 @@ func _physics_process(delta):
 			get_parent().move_right()
 		if Input.is_action_pressed("DIR_LEFT"):
 			get_parent().move_left()
-		if Input.is_action_pressed("ACTION_C"):
-			get_parent().keep_jumping()
 
 func _input(event):
 	if active:
@@ -21,8 +19,6 @@ func _input(event):
 			print("CANCEL")
 		elif event.is_action_pressed("ACTION_C"):
 			get_parent().jump()
-		elif event.is_action_released("ACTION_C"):
-			get_parent().stop_jumping()
 		elif event.is_action_pressed("ACTION_D"):
 			print("AUX")
 		elif event.is_action_pressed("ACTION_PAUSE"):

@@ -341,7 +341,7 @@ tracks/4/keys = {
 "values": [ 0, 1, 2, 3, 4, 5 ]
 }
 
-[node name="Sprite" type="Node2D"]
+[node name="Sprite" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Animation", "Offset" ]
@@ -351,7 +351,7 @@ _sections_unfolded = [ "Animation", "Offset" ]
 texture = ExtResource( 2 )
 offset = Vector2( 0, -13 )
 hframes = 6
-frame = 3
+frame = 5
 _sections_unfolded = [ "Animation", "Offset", "Visibility" ]
 
 [node name="Walk" type="Sprite" parent="." index="1"]

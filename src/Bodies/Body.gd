@@ -7,6 +7,7 @@ signal jumped
 signal moved
 signal stopped
 signal directed
+signal talked
 
 var velocity = Vector2()
 var is_jumping = true
@@ -45,11 +46,8 @@ func jump():
 		self.is_jumping = true
 		emit_signal("jumped")
 
-func keep_jumping():
-	pass
-
-func stop_jumping():
-	pass
+func talk():
+	emit_signal("talked")
 
 func accelerate_gravity():
 	if not is_on_floor():
@@ -63,7 +61,7 @@ func check_floor():
 
 func deaccelerate():
 	self.velocity.x *= Physics.DEACCELERATION
-	if abs(self.velocity.x) <= Physics.EPSILON_SPEED:
+	if abs(self.velocity.x) < Physics.EPSILON_SPEED:
 		self.velocity.x = 0
 		if is_moving and is_on_floor():
 			self.is_moving = false

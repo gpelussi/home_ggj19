@@ -8,6 +8,7 @@ func _ready():
 	body.connect("landed", self, "set_land")
 	body.connect("jumped", self, "set_jump")
 	body.connect("moved", self, "set_walk")
+	body.connect("talked", self, "set_talk")
 	body.connect("directed", self, "set_direction")
 
 func set_idle():

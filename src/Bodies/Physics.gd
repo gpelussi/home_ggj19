@@ -6,7 +6,7 @@ const DOWN = Vector2(0, 1)
 const LEFT = Vector2(-1, 0)
 
 const BASE_SPEED = 24
-const DEACCELERATION = 0.8
+const DEACCELERATION = 0.7
 const EPSILON_SPEED = 1
 
 const JUMP_STRENGTH = 400
