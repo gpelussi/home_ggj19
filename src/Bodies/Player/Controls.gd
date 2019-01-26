@@ -7,12 +7,8 @@ var active = true
 func _physics_process(delta):
 	var direction = Vector2()
 	if active:
-		if Input.is_action_pressed("DIR_UP"):
-			direction += Physics.UP
 		if Input.is_action_pressed("DIR_RIGHT"):
 			direction += Physics.RIGHT
-		if Input.is_action_pressed("DIR_DOWN"):
-			direction += Physics.DOWN
 		if Input.is_action_pressed("DIR_LEFT"):
 			direction += Physics.LEFT
 	if direction.length_squared() > 0:
@@ -26,6 +22,7 @@ func _input(event):
 			print("CANCEL")
 		elif event.is_action_pressed("ACTION_C"):
 			print("JUMP")
+			get_parent().jump()
 		elif event.is_action_pressed("ACTION_D"):
 			print("AUX")
 		elif event.is_action_pressed("ACTION_PAUSE"):

@@ -9,4 +9,5 @@ const BASE_SPEED = 32
 const DEACCELERATION = 0.8
 const EPSILON_SPEED = 1
 
-const GRAVITY = Vector2(0, 256)
+const JUMP = 512
+const GRAVITY = 64
