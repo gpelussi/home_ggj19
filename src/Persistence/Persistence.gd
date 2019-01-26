@@ -14,9 +14,9 @@ func set_data(field, value):
 	data[field] = value
 	save_data()
 
-func get_data(field):
+func get_data(field, default = null):
 	if not data.has(field):
-		return
+		return default
 	return data[field]
 
 func save_data():

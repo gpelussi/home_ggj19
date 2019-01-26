@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Bodies/Components/InteractionEvent.gd" type="Script" id=1]
+
+[node name="InteractionEvent" type="Node"]
+
+script = ExtResource( 1 )
+first_needed_item = ""
+second_needed_item = ""
+text_default = "Default Text"
+text_alt_1 = ""
+text_alt_2 = ""
+
+
