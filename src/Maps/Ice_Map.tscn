@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Bodies/Player/Player.tscn" type="PackedScene" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="." index="0"]
+
+polygon = PoolVector2Array( 10, 10, 10, 200, 20, 200, 30, 200, 40, 210, 50, 210, 50, 220, 60, 220, 90, 220, 100, 220, 120, 220, 140, 220, 150, 230, 170, 230, 220, 220, 260, 220, 310, 230, 370, 230, 430, 220, 470, 220, 520, 230, 560, 220, 690, 220, 690, 10, 710, 10, 710, 10, 710, 260, 600, 260, 0, 260, 0, 10 )
+uv = PoolVector2Array(  )
+color = Color( 0.292969, 0.139618, 0.139618, 1 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = null
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+invert_enable = false
+invert_border = 100.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Polygon2D" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Polygon2D/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 690, 10, 690, 220, 550, 220, 520, 230, 470, 220, 420, 220, 370, 230, 340, 230, 290, 230, 260, 220, 220, 220, 170, 230, 150, 230, 140, 220, 50, 220, 50, 210, 40, 210, 30, 200, 10, 200, 10, 10, 0, 10, 0, 260, 710, 260, 710, 10, 710, 10 )
+
+[node name="Player" parent="Polygon2D/StaticBody2D/CollisionPolygon2D" index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 80, 130 )
+
+
