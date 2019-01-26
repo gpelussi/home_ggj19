@@ -6,6 +6,7 @@ signal landed
 signal jumped
 signal moved
 signal stopped
+signal directed
 
 var velocity = Vector2()
 var is_jumping = true
@@ -26,12 +27,14 @@ func _physics_process(delta):
 
 func move_right():
 	self.velocity += Physics.RIGHT * Physics.BASE_SPEED
+	emit_signal("directed", "right")
 	if not self.is_moving:
 		self.is_moving = true
 		emit_signal("moved")
 
 func move_left():
 	self.velocity += Physics.LEFT * Physics.BASE_SPEED
+	emit_signal("directed", "left")
 	if not self.is_moving:
 		self.is_moving = true
 		emit_signal("moved")
@@ -56,12 +59,12 @@ func check_floor():
 	if self.is_jumping and is_on_floor():
 		self.velocity.y = 0
 		self.is_jumping = false
-		emit_signal("landed", self.position)
+		emit_signal("landed")
 
 func deaccelerate():
 	self.velocity.x *= Physics.DEACCELERATION
 	if abs(self.velocity.x) <= Physics.EPSILON_SPEED:
 		self.velocity.x = 0
-		if is_on_floor():
+		if is_moving and is_on_floor():
 			self.is_moving = false
 			emit_signal("stopped")
