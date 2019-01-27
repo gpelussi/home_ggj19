@@ -48,12 +48,12 @@ polygon = PoolVector2Array( 20, 10, 20, 210, 60, 210, 60, 230, 110, 230, 370, 23
 [node name="sky-earth" type="Sprite" parent="." index="1"]
 
 position = Vector2( 360, 130 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
 [node name="TileMap" type="TileMap" parent="." index="2"]
 
 mode = 0
-tile_set = ExtResource( 2 )
+tile_set = ExtResource( 3 )
 cell_size = Vector2( 16, 16 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -74,23 +74,23 @@ _sections_unfolded = [ "Cell", "Collision" ]
 [node name="earth npc2 house" type="Sprite" parent="TileMap" index="0"]
 
 position = Vector2( 410, 180 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="earth npc3 house" type="Sprite" parent="TileMap" index="1"]
 
 position = Vector2( 570, 200 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="eath npc1 house" type="Sprite" parent="TileMap" index="2"]
 
 position = Vector2( 260, 190 )
 scale = Vector2( 1.59375, 1.4375 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 
 [node name="TileMap2" type="TileMap" parent="." index="3"]
 
 mode = 0
-tile_set = ExtResource( 2 )
+tile_set = ExtResource( 3 )
 cell_size = Vector2( 16, 16 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )

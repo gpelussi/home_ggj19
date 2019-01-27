@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Another Space Background Track (menu).ogg-e8cab44eabab7866bcf410eb55583094.oggstr"
+
+[deps]
+
+source_file="res://Assets/BGM/Another Space Background Track (menu).ogg"
+dest_files=[ "res://.import/Another Space Background Track (menu).ogg-e8cab44eabab7866bcf410eb55583094.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

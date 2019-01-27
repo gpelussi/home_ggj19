@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/beetle.wav-b26024e4b2b0a173f96c5470c86b49eb.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/desert/beetle.wav"
+dest_files=[ "res://.import/beetle.wav-b26024e4b2b0a173f96c5470c86b49eb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
