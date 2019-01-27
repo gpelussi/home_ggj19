@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://HomeScreen/HomeScreen.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Sprites/Hud/background-alt.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Sprites/Hud/title.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Fonts/munro_16.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Assets/BGM/Intro.ogg" type="AudioStream" id=5]
 
 [sub_resource type="Animation" id=1]
 
@@ -55,7 +56,7 @@ tracks/0/keys = {
 "values": [ false, true ]
 }
 
-[node name="HomeScreen" type="Node2D"]
+[node name="HomeScreen" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -177,5 +178,16 @@ texture_scale = Vector2( 1, 1 )
 texture_rotation_degrees = 0.0
 invert_enable = false
 invert_border = 100.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="6"]
+
+stream = ExtResource( 5 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = true
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
 
 
