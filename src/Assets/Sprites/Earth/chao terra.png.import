@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sky-earth.png-1d95a88b19b787516e454cd31a4a0b98.stex"
+path="res://.import/chao terra.png-7f7bb56c13dd329766b851a548331d5e.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/EarthScenario/sky-earth.png"
-dest_files=[ "res://.import/sky-earth.png-1d95a88b19b787516e454cd31a4a0b98.stex" ]
+source_file="res://Assets/Sprites/Earth/chao terra.png"
+dest_files=[ "res://.import/chao terra.png-7f7bb56c13dd329766b851a548331d5e.stex" ]
 
 [params]
 
