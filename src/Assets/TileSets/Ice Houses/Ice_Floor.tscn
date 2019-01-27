@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Assets/TileSets/Ice Houses/chao.png" type="Texture" id=1]
+[ext_resource path="res://Assets/TileSets/Ice Houses/chao ice.png" type="Texture" id=1]
 
 [node name="Node2D" type="Node2D"]
 
@@ -62,7 +62,7 @@ _sections_unfolded = [ "Region" ]
 
 [node name="Chao8" type="Sprite" parent="." index="7"]
 
-position = Vector2( 30, 220 )
+position = Vector2( 60, 190 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 96, 0, 16, 16 )
