@@ -20,6 +20,7 @@ Resolution="*res://Misc/Resolution.gd"
 Inventory="*res://Persistence/Inventory.tscn"
 Database="*res://Database/Database.tscn"
 Hud="*res://Hud/Hud.tscn"
+LoadingScreen="*res://Misc/LoadingScreen.tscn"
 
 [debug]
 
