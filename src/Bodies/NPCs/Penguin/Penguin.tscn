@@ -33,7 +33,6 @@ dialogue_text = "Penguin: If you see the merchant, ask about my delivery!
 
 [node name="Condition" parent="Interaction/InteractionEvent" index="1" instance=ExtResource( 4 )]
 
-editor/display_folded = true
 check_if_player_has_item = 1
 has_item = "Calculator"
 check_if_npc_has_item = 0

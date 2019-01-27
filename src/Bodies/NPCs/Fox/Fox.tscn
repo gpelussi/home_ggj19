@@ -33,6 +33,7 @@ dialogue_text = "Player: This fox is looking at a pile of dirt on the ground.
 
 [node name="Condition" parent="Interaction/InteractionEvent" index="1" instance=ExtResource( 4 )]
 
+editor/display_folded = true
 check_if_player_has_item = 1
 has_item = "Shovel"
 check_if_npc_has_item = 0
@@ -83,6 +84,67 @@ Fox: Um, well, you can take this. I don’t use it. It’s just for the looks.
 Fox:  Now… to dissolve the corpses...
 
 Player: But aren’t you a doc-... Nevermind.
+"
+
+[node name="Condition2" parent="Interaction/InteractionEvent" index="2" instance=ExtResource( 4 )]
+
+check_if_player_has_item = 1
+has_item = "Lime"
+check_if_npc_has_item = 0
+
+[node name="GiftItem" parent="Interaction/InteractionEvent/Condition2" index="0" instance=ExtResource( 5 )]
+
+item_to_give = "Lime"
+who_to_give_item_to = "Fox"
+
+[node name="AwardItem" parent="Interaction/InteractionEvent/Condition2" index="1" instance=ExtResource( 6 )]
+
+item_to_give = "Chainsaw"
+
+[node name="TextBox" parent="Interaction/InteractionEvent/Condition2" index="2" instance=ExtResource( 3 )]
+
+dialogue_text = "Player: I don’t know what I’m gettin into, 
+
+Player: but I figured you might find a use to this. 
+
+Fox: Is this Kal? Really? It’s exactly what I needed. 
+
+Player: Yeah… Tell me something (god, I might regret this), 
+
+Player: but are you killing people in here?
+
+Fox: I’m a hunter killer. 
+
+Fox: I despise the ones who think they have any power over other folk’s territory. 
+
+Fox: I treat the wounds of the hunted and wound the hunters to their death. 
+
+Player: Aren’t you afraid? 
+
+Fox: Of defending my people? Fighting for a cause? 
+
+Fox: No. We all must protect our home, our haven. 
+
+Fox: We must be brave enough to fight for such a valuable thing. 
+
+Player: I see.
+
+Fox: Could you find a home for yourself? 
+
+Player: What? I never told you I was looking for one.
+
+Fox: News go fast around here. 
+
+Fox: That’s why this Kal’s gonna be useful. But hey, don’t give up. 
+
+Fox: You just gotta look in a different way. 
+
+Player: Oh, thanks. That was actually really kind of you
+
+Fox: But now get rid of this for me. I’m out! 
+
+Player: WAIT-! 
+
 "
 
 [node name="Sprite" parent="." index="3" instance=ExtResource( 7 )]

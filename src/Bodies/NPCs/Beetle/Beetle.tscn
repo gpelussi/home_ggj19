@@ -3,9 +3,9 @@
 [ext_resource path="res://Bodies/NPCs/NPC.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Bodies/Components/InteractionEvent.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Bodies/Components/Commands/Condition.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Bodies/Components/Commands/TextBox.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Bodies/Components/Commands/GiftItem.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Bodies/Components/Commands/AwardItem.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Bodies/Components/Commands/GiftItem.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Bodies/Components/Commands/TextBox.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Bodies/NPCs/Beetle/Sprite.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -29,11 +29,21 @@ shape = SubResource( 1 )
 [node name="Condition" parent="Interaction/InteractionEvent" index="0" instance=ExtResource( 3 )]
 
 check_if_player_has_item = 0
-check_if_npc_has_item = 2
+check_if_npc_has_item = 1
 npc_which = "Beetle"
 npc_which_item = "Block"
 
-[node name="TextBox" parent="Interaction/InteractionEvent/Condition" index="0" instance=ExtResource( 4 )]
+[node name="GiftItem" parent="Interaction/InteractionEvent/Condition" index="0" instance=ExtResource( 4 )]
+
+item_to_give = "Block"
+who_to_give_item_to = "Beetle"
+
+[node name="AwardItem" parent="Interaction/InteractionEvent/Condition" index="1" instance=ExtResource( 5 )]
+
+_sections_unfolded = [ "Pause" ]
+item_to_give = "Calculator"
+
+[node name="TextBox" parent="Interaction/InteractionEvent/Condition" index="2" instance=ExtResource( 6 )]
 
 dialogue_text = "Beetle: You zeem new around here. Wanna buy zome zouvenirz?
 
@@ -50,23 +60,13 @@ Player: That would help me a lot!
 Beetle: Here, take thiz to Penguin.
 "
 
-[node name="AwardItem" parent="Interaction/InteractionEvent/Condition" index="1" instance=ExtResource( 5 )]
-
-_sections_unfolded = [ "Pause" ]
-item_to_give = "Calculator"
-
-[node name="GiftItem" parent="Interaction/InteractionEvent/Condition" index="2" instance=ExtResource( 6 )]
-
-item_to_give = "Block"
-who_to_give_item_to = "Beetle"
-
 [node name="Condition2" parent="Interaction/InteractionEvent" index="1" instance=ExtResource( 3 )]
 
 check_if_player_has_item = 1
 has_item = "Calculator"
 check_if_npc_has_item = 0
 
-[node name="TextBox" parent="Interaction/InteractionEvent/Condition2" index="0" instance=ExtResource( 4 )]
+[node name="TextBox" parent="Interaction/InteractionEvent/Condition2" index="0" instance=ExtResource( 6 )]
 
 dialogue_text = "Player: Do you need anything else? 
 
@@ -90,17 +90,17 @@ item_to_give = "Coin"
 check_if_player_has_item = 0
 check_if_npc_has_item = 0
 
-[node name="GiftItem" parent="Interaction/InteractionEvent/Condition3" index="0" instance=ExtResource( 6 )]
+[node name="GiftItem" parent="Interaction/InteractionEvent/Condition3" index="0" instance=ExtResource( 4 )]
 
 item_to_give = "Chainsaw"
 who_to_give_item_to = "Beetle"
 
-[node name="GiftItem2" parent="Interaction/InteractionEvent/Condition3" index="1" instance=ExtResource( 6 )]
+[node name="GiftItem2" parent="Interaction/InteractionEvent/Condition3" index="1" instance=ExtResource( 4 )]
 
 item_to_give = "Mask"
 who_to_give_item_to = "Beetle"
 
-[node name="TextBox" parent="Interaction/InteractionEvent/Condition3" index="2" instance=ExtResource( 4 )]
+[node name="TextBox" parent="Interaction/InteractionEvent/Condition3" index="2" instance=ExtResource( 6 )]
 
 dialogue_text = "Player: Hey! Remember me? 
 

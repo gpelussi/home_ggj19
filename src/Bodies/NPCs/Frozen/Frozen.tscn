@@ -13,7 +13,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 20, 20 )
 
-[node name="Frozen" index="0" instance=ExtResource( 1 )]
+[node name="Frozen" instance=ExtResource( 1 )]
 
 [node name="HitBox" parent="." index="0"]
 
@@ -88,7 +88,32 @@ who_to_give_item_to = "Frozen"
 
 [node name="AwardItem" parent="Interaction/InteractionEvent/Condition2" index="1" instance=ExtResource( 5 )]
 
+item_to_give = "Mask"
+
 [node name="TextBox" parent="Interaction/InteractionEvent/Condition2" index="2" instance=ExtResource( 3 )]
+
+dialogue_text = "Frozen: Where the hell did you find my drone? 
+
+Frozen:  I’ve been looking for this for days! 
+
+Player: It was just by your neighbor’s backyard. 
+
+Frozen: Oh, that ridiculous man. Making shows everywhere, 
+
+Frozen: not valuing his own art. I would never get close to his backyard. 
+
+Frozen: I’m glad I had you to do this for me. 
+
+Player: Oh, sure. I didn’t know you weren’t fond of the guy, though.
+
+Frozen: I’m certainly not. So thank you for that. 
+
+Frozen: Take this mask. It’s an original piece I made for one of my biggest plays. 
+
+Player: I’m sure I’ll put it to good use. 
+
+Frozen: Ha! Now, to start filming!! 
+"
 
 [node name="Sprite" parent="." index="3" instance=ExtResource( 7 )]
 
