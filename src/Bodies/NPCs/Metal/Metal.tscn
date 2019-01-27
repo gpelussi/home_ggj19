@@ -13,7 +13,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 20, 20 )
 
-[node name="Metal" instance=ExtResource( 1 )]
+[node name="Metal" index="0" instance=ExtResource( 1 )]
 
 [node name="HitBox" parent="." index="0"]
 
@@ -79,6 +79,50 @@ Player: Oh, sure. I can… wait…
 Metal: While that doesn’t happen… 
 
 Metal: here! Have this sack of Kal, cause that’s what I can give you now. 
+"
+
+[node name="Condition2" parent="Interaction/InteractionEvent" index="2" instance=ExtResource( 4 )]
+
+check_if_player_has_item = 1
+has_item = "Chestnut"
+check_if_npc_has_item = 0
+
+[node name="GiftItem" parent="Interaction/InteractionEvent/Condition2" index="0" instance=ExtResource( 5 )]
+
+item_to_give = "Chestnut"
+who_to_give_item_to = "Metal"
+
+[node name="AwardItem" parent="Interaction/InteractionEvent/Condition2" index="1" instance=ExtResource( 6 )]
+
+item_to_give = "Drone"
+
+[node name="TextBox2" parent="Interaction/InteractionEvent/Condition2" index="2" instance=ExtResource( 3 )]
+
+dialogue_text = "Player: So… you said you needed something to save your music records.
+
+Metal: What? You got anything?! 
+
+Player: Yes! I got this pen-drive. 
+
+Player: It has a lot of good things to study as well, but you can use it to put your song. 
+
+Metal: Really? This little thing can fit a whole song?! 
+
+Metal: God, I need to know more about such technologies. 
+
+Metal: I will take it, yes!! You know, bet thing about building houses to people is their gratitude. 
+
+Metal: A lot of clients of mine come to my shows as a thank you for making their homes. 
+
+Metal: Thank you, seriously. 
+
+Player: Hey, no problem. 
+
+Metal: This tech-thingy fell in my backyard ‘couple days ago. 
+
+Metal: Here. Have it as my gratitude. I don’t even know what it is but maybe it’s valuable. 
+
+Player: Oh god. I think I know who this belongs to. 
 "
 
 [node name="Sprite" parent="." index="3" instance=ExtResource( 7 )]

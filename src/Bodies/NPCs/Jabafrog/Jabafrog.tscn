@@ -34,7 +34,6 @@ dialogue_text = "Jaba: Howdy! Wanna buy some Lizards?
 
 [node name="Condition" parent="Interaction/InteractionEvent" index="1" instance=ExtResource( 4 )]
 
-editor/display_folded = true
 check_if_player_has_item = 1
 has_item = "Coin"
 check_if_npc_has_item = 0

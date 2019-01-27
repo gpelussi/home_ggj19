@@ -29,7 +29,9 @@ shape = SubResource( 1 )
 [node name="Condition" parent="Interaction/InteractionEvent" index="0" instance=ExtResource( 3 )]
 
 check_if_player_has_item = 0
-check_if_npc_has_item = 0
+check_if_npc_has_item = 2
+npc_which = "Beetle"
+npc_which_item = "Block"
 
 [node name="TextBox" parent="Interaction/InteractionEvent/Condition" index="0" instance=ExtResource( 4 )]
 
@@ -53,6 +55,11 @@ Beetle: Here, take thiz to Penguin.
 _sections_unfolded = [ "Pause" ]
 item_to_give = "Calculator"
 
+[node name="GiftItem" parent="Interaction/InteractionEvent/Condition" index="2" instance=ExtResource( 6 )]
+
+item_to_give = "Block"
+who_to_give_item_to = "Beetle"
+
 [node name="Condition2" parent="Interaction/InteractionEvent" index="1" instance=ExtResource( 3 )]
 
 check_if_player_has_item = 1
@@ -75,6 +82,8 @@ Beetle: I mizz them back home.
 "
 
 [node name="AwardItem" parent="Interaction/InteractionEvent/Condition2" index="1" instance=ExtResource( 5 )]
+
+item_to_give = "Coin"
 
 [node name="Condition3" parent="Interaction/InteractionEvent" index="2" instance=ExtResource( 3 )]
 

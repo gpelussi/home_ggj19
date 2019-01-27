@@ -13,7 +13,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 20, 10 )
 
-[node name="Squirrel" instance=ExtResource( 1 )]
+[node name="Squirrel" index="0" instance=ExtResource( 1 )]
 
 [node name="HitBox" parent="." index="0"]
 
@@ -80,9 +80,46 @@ who_to_give_item_to = "Squirrel"
 
 [node name="AwardItem" parent="Interaction/InteractionEvent/Condition2" index="1" instance=ExtResource( 6 )]
 
-item_to_give = "Chessnut"
+item_to_give = "Chestnut"
 
 [node name="TextBox" parent="Interaction/InteractionEvent/Condition2" index="2" instance=ExtResource( 3 )]
+
+dialogue_text = "Squirrel: OH NO. OH NO. OHNOOHNOOHNOOHNOOHNO.
+
+Player: Yeah, it’s the-
+
+Squirrel: IT’S THE AMULET!!!!!!!!!!!!!!!!!!!!!!!!
+
+Player: Hahaha! I knew you would like it. 
+
+Squirrel: You kidding me?! Dude that’s even cooler than the book… my god… 
+
+Player: It’s yours! It’s a gift. 
+
+Squirrel: Thank you… I’m out of words. 
+
+Squirrel: For years I’ve been wanting to get in touch with other cultures… 
+
+Squirrel: Meeting other worlds... Doing research… 
+
+Squirrel: My mom never let me explore the universe around. 
+
+Squirrel: My home feels like a prison. 
+
+Player: Heeey. If you have knowledge, 
+
+Squirrel: if you research and you’re able to learn from inside your home, 
+
+Squirrel: then you’re never locked. 
+
+Squirrel: Yeah… I guess you’re right. It’s all thanks to you, 
+
+Squirrel: friend. Um… here. This pen-drive contains a lot of my research. 
+
+Squirrel: Spread it. Make knowledge available to every home in the world. 
+
+Squirrel: One day, I’ll do it myself. 
+"
 
 [node name="Sprite" parent="." index="3" instance=ExtResource( 7 )]
 
