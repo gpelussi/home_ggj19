@@ -28,7 +28,6 @@ shape = SubResource( 1 )
 
 [node name="Condition" parent="Interaction/InteractionEvent" index="0" instance=ExtResource( 3 )]
 
-editor/display_folded = true
 check_if_player_has_item = 0
 check_if_npc_has_item = 0
 
@@ -56,7 +55,6 @@ item_to_give = "Calculator"
 
 [node name="Condition2" parent="Interaction/InteractionEvent" index="1" instance=ExtResource( 3 )]
 
-editor/display_folded = true
 check_if_player_has_item = 1
 has_item = "Calculator"
 check_if_npc_has_item = 0
@@ -80,7 +78,6 @@ Beetle: I mizz them back home.
 
 [node name="Condition3" parent="Interaction/InteractionEvent" index="2" instance=ExtResource( 3 )]
 
-editor/display_folded = true
 check_if_player_has_item = 0
 check_if_npc_has_item = 0
 

@@ -1,15 +1,19 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Bodies/NPCs/NPC.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Bodies/Components/InteractionEvent.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Bodies/NPCs/Fox/Sprite.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Bodies/Components/Commands/TextBox.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Bodies/Components/Commands/Condition.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Bodies/Components/Commands/GiftItem.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Bodies/Components/Commands/AwardItem.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Bodies/NPCs/Fox/Sprite.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 14.8385, 13.0599 )
 
-[node name="Fox" index="0" instance=ExtResource( 1 )]
+[node name="Fox" instance=ExtResource( 1 )]
 
 [node name="HitBox" parent="." index="0"]
 
@@ -22,9 +26,29 @@ shape = SubResource( 1 )
 
 [node name="InteractionEvent" parent="Interaction" index="1" instance=ExtResource( 2 )]
 
-first_needed_item = "Shovel"
-second_needed_item = "Lime"
-text_alt_1 = "Fox: Hey. You. 
+[node name="TextBox" parent="Interaction/InteractionEvent" index="0" instance=ExtResource( 3 )]
+
+dialogue_text = "Player: This fox is looking at a pile of dirt on the ground.
+"
+
+[node name="Condition" parent="Interaction/InteractionEvent" index="1" instance=ExtResource( 4 )]
+
+check_if_player_has_item = 1
+has_item = "Shovel"
+check_if_npc_has_item = 0
+
+[node name="GiftItem" parent="Interaction/InteractionEvent/Condition" index="0" instance=ExtResource( 5 )]
+
+item_to_give = "Shovel"
+who_to_give_item_to = "Fox"
+
+[node name="AwardItem" parent="Interaction/InteractionEvent/Condition" index="1" instance=ExtResource( 6 )]
+
+item_to_give = "Stethoscope"
+
+[node name="TextBox" parent="Interaction/InteractionEvent/Condition" index="2" instance=ExtResource( 3 )]
+
+dialogue_text = "Fox: Hey. You. 
 
 Player: Yeah, me. 
 
@@ -36,15 +60,17 @@ Fox: If I’m hiding, it means it’s a secret.
 
 Player: Fine. Have it. I won’t use it anyway. 
 
-Fox: Hehe! Thank you. 
+Fox: Hehe! Thank you. You know, 
 
-Fox: You know, those idiots who hurt innocent people to take their homes… 
+Fox:  those idiots who hurt innocent people to take their homes… 
 
 Fox: they deserve hell, you know. 
 
 Player: … right. 
 
-Fox: I spend my day here, caring for those they leave wounded… I just can’t stand it. They all must pay. And I’m gonna make them pay. 
+Fox: I spend my day here, caring for those they leave wounded… 
+
+Fox: I just can’t stand it. They all must pay. And I’m gonna make them pay. 
 
 Player: Sure. Well… aren’t you gonna give me anything? 
 
@@ -52,52 +78,15 @@ Fox: Why would I?
 
 Player. I-I don’t know. It’s been happening. 
 
-Fox: Um, well, you can take this. I don’t use it. It’s just for the looks. Now… to dissolve the corpses...
+Fox: Um, well, you can take this. I don’t use it. It’s just for the looks. 
+
+Fox:  Now… to dissolve the corpses...
 
 Player: But aren’t you a doc-... Nevermind.
 "
-text_alt_2 = "Player: I don’t know what I’m gettin into, but I figured you might find a use to this. 
 
-Fox: Is this Kal? Really? It’s exactly what I needed. 
+[node name="Sprite" parent="." index="3" instance=ExtResource( 7 )]
 
-Player: Yeah… Tell me something (god, I might regret this), 
-
-Player: but are you killing people in here?
-
-Fox: I’m a hunter killer. 
-
-Fox: I despise the ones who think they have any power over other folk’s territory. 
-
-Fox: I treat the wounds of the hunted and wound the hunters to their death. 
-
-Player: Aren’t you afraid? 
-
-Fox: Of defending my people? Fighting for a cause? No. 
-
-Fox: We all must protect our home, our haven. 
-
-Fox: We must be brave enough to fight for such a valuable thing. 
-
-Player: I see.
-
-Fox: Could you find a home for yourself? 
-
-Player: What? I never told you I was looking for one.
-
-Fox: News go fast around here. That’s why this Kal’s gonna be useful. 
-
-Fox: But hey, don’t give up. You just gotta look in a different way. 
-
-Player: Oh, thanks. That was actually really kind of you.
-
-Fox: But now get rid of this for me. I’m out! 
-
-Player: WAIT-! 
-"
-item_given_on_first_text = "Stethoscope"
-item_given_on_second_text = "Saw"
-item_given_on_third_text = ""
-
-[node name="Sprite" parent="." index="3" instance=ExtResource( 3 )]
+position = Vector2( 0.15778, 0 )
 
 
