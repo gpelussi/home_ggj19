@@ -6,13 +6,8 @@ export(String) var persistance_name = "userdata"
 
 var data = {}
 
-func _ready():
-	load_data()
-	save_data()
-
 func set_data(field, value):
 	data[field] = value
-	save_data()
 
 func get_data(field, default = null):
 	if not data.has(field):
