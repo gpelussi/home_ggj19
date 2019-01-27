@@ -22,7 +22,63 @@ shape = SubResource( 1 )
 
 [node name="InteractionEvent" parent="Interaction" index="1" instance=ExtResource( 2 )]
 
-item_given_on_first_text = ""
+first_needed_item = "Book"
+second_needed_item = "Amulet"
+text_alt_1 = "Squirrel: OH GOD!!!! THIS BOOK YOU’RE CARRYING!! IS IT FROM THAT STRANGE PLANET??? 
+
+Squirrel: God, I feel like my dreams of knowing more about other planets are gonna come to life.
+
+Player: Well, it’s not from here, that’s for sure. 
+
+Squirrel: IT IS! IT IS FROM THAT OCTOPUS COMIC! CAN I KEEP IT?????! 
+
+Squirrel: You can have anything-! Here t-take my precious limited edition kigurumi! 
+
+Player: H-ey, you don’t need to-
+
+Squirrel: TAKE IT. THIS BOOK IS TOO DAMN VALUABLE. 
+
+Squirrel: My dreams of meeting other planets are getting closer and closer to reality. 
+
+Squirrel: Oh my goooooooooood it has the picture of an amulet in the cover!!!!!! 
+"
+text_alt_2 = "Squirrel: OH NO. OH NO. OHNOOHNOOHNOOHNOOHNO.
+
+Player: Yeah, it’s the-
+
+Squirrel: IT’S THE AMULET!!!!!!!!!!!!!!!!!!!!!!!!
+
+Player: Hahaha! I knew you would like it. 
+
+Squirrel: You kidding me?! 
+
+Squirrel: Dude that’s even cooler than the book… my god… 
+
+Player: It’s yours! It’s a gift. 
+
+Squirrel: Thank you… I’m out of words. 
+
+Squirrel: For years I’ve been wanting to get in touch with other cultures… 
+
+Squirrel: Meeting other worlds... Doing research… 
+
+Squirrel: My mom never let me explore the universe around. 
+
+Squirrel: My home feels like a prison. 
+
+Player: If you have knowledge, if you’re able to learn from inside your home, 
+
+Player: then you’re never locked. 
+
+Squirrel: Yeah… I guess you’re right. It’s all thanks to you, friend. Um… here. 
+
+Squirrel: This pen-drive contains a lot of my research. 
+
+Squirrel: Spread it. Make knowledge available to every home in the world.
+
+Squirrel:  One day, I’ll do it myself. 
+"
+item_given_on_first_text = "Kigurumi"
 item_given_on_second_text = ""
 item_given_on_third_text = ""
 

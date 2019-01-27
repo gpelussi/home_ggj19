@@ -22,9 +22,63 @@ shape = SubResource( 1 )
 
 [node name="InteractionEvent" parent="Interaction" index="1" instance=ExtResource( 2 )]
 
+first_needed_item = "Calculator"
+second_needed_item = "Katana"
+text_alt_1 = "Penguin: 'Sup. You here to taste my delicious sushi, bro? 
+
+Player: Actually, I have a delivery. 
+
+Penguin: Man, you saved mah life! I'm no good at math stuff at all. 
+
+Penguin: I needed this for the restaurant bills and such. 
+
+Penguin: That dude, I hope he's getting enough money to go home and see his daughters, yo.
+
+Penguin: Bought the calculator to help him. 
+
+Player: Oh... The merchant Beetle? What’s up with his daughters though?
+
+Penguin: Dude haven’t got much time to see’em lately ‘cause of work. 
+
+Penguin: Sad, right? By the way... if you happen to find a katana somewhere, 
+
+Penguin: I can give you something in return for it. 
+
+Player: Sure! And I’m looking for a home, if you could help me.
+
+Penguin: Then you’re invited to come and eat here in my simple restaurant someday, yo. 
+
+Penguin: Best way to feel like home is by tasting its flavor. But yea, anyways, tell Beetle I sent hello.
+"
+text_alt_2 = "Penguin: Yeaaaaaaaaaa! Look who’s back! 
+
+Player: It’s me! Long time no see! 
+
+Penguin: Ya bet. And I see you got that Katana I asked you about! 
+
+Penguin: Man, u the best buddy ever.
+
+Player: It’s yours. Have fun with your sushi now! 
+
+Penguin: Maaan, the show I’m gonna put on cutting sushi with this new babe. 
+
+Penguin: Oh! Have this. Its the finest fish there ever was. 
+
+Player: Oh! Really?
+
+Penguin: They’re known for their unique flavor
+
+Penguin: one that makes everyone remember home.  My fave ingredient.
+
+Player: Cool… I might have just the use for it. 
+
+Player: Hey! Can I maybe… take one of those flowers you have around? 
+
+Penguin: Flowers? Wha- Oh. Oh, sure. These aren’t even mine to keep, bro. 
+"
 item_given_on_first_text = ""
-item_given_on_second_text = ""
-item_given_on_third_text = ""
+item_given_on_second_text = "Fish"
+item_given_on_third_text = "Flower"
 
 [node name="Sprite" parent="." index="3" instance=ExtResource( 3 )]
 

@@ -22,7 +22,65 @@ shape = SubResource( 1 )
 
 [node name="InteractionEvent" parent="Interaction" index="1" instance=ExtResource( 2 )]
 
-item_given_on_first_text = ""
+first_needed_item = "Mirror"
+second_needed_item = "Flower"
+text_alt_1 = "Samurai: It is just like this one. 
+
+Player: What? The mirror?
+
+Samurai: Yes. It’s exactly the one my beloved Yuki adored...
+
+Samurai: when she was still here among us. 
+
+Player: Here. Take it.
+
+Samurai: Are you sure, child? 
+
+Player: Yes. It must be special to you. 
+
+Samurai: Memories are the closest thing you have of a home. 
+
+Samurai: It is just like Yuki’s garden. My best memories of her are there. 
+
+Samurai: I take care of that garden just as thoughtfully as she used to do. 
+
+Player: Must be pretty. 
+
+Samurai: It is one of the prettiest things this planet has to offer. 
+
+Samurai: It still has her light to it. Now if only I could find that blue flower again… 
+
+Samurai: I’ll hold on to this gift dearly, my friend. 
+
+Samurai: Thank you. Here, have the trinket of most honor to my family. 
+"
+text_alt_2 = "Samurai: Could it be possible…?
+
+Player: Yes, it could. I’m getting pretty good at finding people’s stuff. 
+
+Samurai: It’s the actual flower. Look, Yuki… The Moonflake… 
+
+Samurai: Now I can put it back to our garden! 
+
+Player: I hope it brings you joy. 
+
+Samurai: My garden shines brighter with Yuki’s light since you appeared, my friend.
+
+Samurai:  I have no words to thank you. 
+
+Player: No need.
+
+Samurai: I don’t have anything else to give you but this shovel. 
+
+Samurai: It belonged to the garden, so it couldn’t be more valuable. 
+
+Player: It’s okay! You can keep it, its just a sh-
+
+Samurai: Take. It. 
+
+Player: O-k...
+"
+item_given_on_first_text = "Katana"
 item_given_on_second_text = ""
 item_given_on_third_text = ""
 
