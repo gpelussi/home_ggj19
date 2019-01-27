@@ -483,11 +483,10 @@ _sections_unfolded = [ "Animation", "Offset" ]
 
 [node name="Idle" type="Sprite" parent="." index="0"]
 
-visible = false
 texture = ExtResource( 2 )
 offset = Vector2( 0, -13 )
 hframes = 6
-frame = 4
+frame = 2
 _sections_unfolded = [ "Animation", "Offset", "Visibility" ]
 
 [node name="Walk" type="Sprite" parent="." index="1"]
@@ -519,6 +518,7 @@ _sections_unfolded = [ "Animation", "Visibility" ]
 
 [node name="Fanfare" type="Sprite" parent="." index="4"]
 
+visible = false
 texture = ExtResource( 6 )
 offset = Vector2( 0, -13 )
 hframes = 6
