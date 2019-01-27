@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Bodies/NPCs/NPC.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Bodies/Components/InteractionEvent.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Bodies/NPCs/Squirrel/Sprite.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Bodies/Components/Commands/TextBox.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Bodies/Components/Commands/Condition.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Bodies/Components/Commands/AwardItem.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Bodies/NPCs/Squirrel/Sprite.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -22,11 +25,28 @@ shape = SubResource( 1 )
 
 [node name="InteractionEvent" parent="Interaction" index="1" instance=ExtResource( 2 )]
 
-first_needed_item = "Book"
-second_needed_item = "Amulet"
-text_alt_1 = "Squirrel: OH GOD!!!! THIS BOOK YOU’RE CARRYING!! IS IT FROM THAT STRANGE PLANET??? 
+[node name="TextBox" parent="Interaction/InteractionEvent" index="0" instance=ExtResource( 3 )]
 
-Squirrel: God, I feel like my dreams of knowing more about other planets are gonna come to life.
+dialogue_text = "Squirrel: I wish I could learn from other worlds...
+"
+
+[node name="Condition" parent="Interaction/InteractionEvent" index="1" instance=ExtResource( 4 )]
+
+check_if_player_has_item = 1
+has_item = "Book"
+check_if_npc_has_item = 0
+
+[node name="AwardItem" parent="Interaction/InteractionEvent/Condition" index="0" instance=ExtResource( 5 )]
+
+item_to_give = "Kigurumi"
+
+[node name="TextBox" parent="Interaction/InteractionEvent/Condition" index="1" instance=ExtResource( 3 )]
+
+dialogue_text = "Squirrel: OH GOD!!!! THIS BOOK YOU’RE CARRYING!! 
+
+Squirrel: IS IT FROM THAT STRANGE PLANET??? 
+
+Squirrel: I feel like my dreams of knowing more about other planets are gonna come to life.
 
 Player: Well, it’s not from here, that’s for sure. 
 
@@ -42,46 +62,7 @@ Squirrel: My dreams of meeting other planets are getting closer and closer to re
 
 Squirrel: Oh my goooooooooood it has the picture of an amulet in the cover!!!!!! 
 "
-text_alt_2 = "Squirrel: OH NO. OH NO. OHNOOHNOOHNOOHNOOHNO.
 
-Player: Yeah, it’s the-
-
-Squirrel: IT’S THE AMULET!!!!!!!!!!!!!!!!!!!!!!!!
-
-Player: Hahaha! I knew you would like it. 
-
-Squirrel: You kidding me?! 
-
-Squirrel: Dude that’s even cooler than the book… my god… 
-
-Player: It’s yours! It’s a gift. 
-
-Squirrel: Thank you… I’m out of words. 
-
-Squirrel: For years I’ve been wanting to get in touch with other cultures… 
-
-Squirrel: Meeting other worlds... Doing research… 
-
-Squirrel: My mom never let me explore the universe around. 
-
-Squirrel: My home feels like a prison. 
-
-Player: If you have knowledge, if you’re able to learn from inside your home, 
-
-Player: then you’re never locked. 
-
-Squirrel: Yeah… I guess you’re right. It’s all thanks to you, friend. Um… here. 
-
-Squirrel: This pen-drive contains a lot of my research. 
-
-Squirrel: Spread it. Make knowledge available to every home in the world.
-
-Squirrel:  One day, I’ll do it myself. 
-"
-item_given_on_first_text = "Kigurumi"
-item_given_on_second_text = ""
-item_given_on_third_text = ""
-
-[node name="Sprite" parent="." index="3" instance=ExtResource( 3 )]
+[node name="Sprite" parent="." index="3" instance=ExtResource( 6 )]
 
 
