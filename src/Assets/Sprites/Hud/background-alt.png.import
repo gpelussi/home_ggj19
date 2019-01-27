@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/misc.png-3b1efbca4f7f413d3608ed73e5c71b05.stex"
+path="res://.import/background-alt.png-77a34b249acc25a7d6b8d23bbd3ad46a.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/DesertScenario/misc.png"
-dest_files=[ "res://.import/misc.png-3b1efbca4f7f413d3608ed73e5c71b05.stex" ]
+source_file="res://Assets/Sprites/Hud/background-alt.png"
+dest_files=[ "res://.import/background-alt.png-77a34b249acc25a7d6b8d23bbd3ad46a.stex" ]
 
 [params]
 
