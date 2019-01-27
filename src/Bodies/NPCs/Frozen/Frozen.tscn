@@ -22,8 +22,56 @@ shape = SubResource( 1 )
 
 [node name="InteractionEvent" parent="Interaction" index="1" instance=ExtResource( 2 )]
 
-item_given_on_first_text = ""
-item_given_on_second_text = ""
+first_needed_item = "Kigurumi"
+second_needed_item = "Drone"
+text_alt_1 = "Frozen: Oh my my, what have we here~ 
+
+Player: Hey! 
+
+Frozen: I see you have a costume there. 
+
+Frozen: One I happen to need in order to star in my next homemade movie. 
+
+Player: Well… Do you want it? You can have it actually. 
+
+Frozen: I’m on a “helping people” vibe. Trying to find a home. 
+
+Frozen: HA! Well, sorry but my home is for my art only. 
+
+Frozen: What better place for keeping your masterpieces 
+
+Frozen: if not the temple that is your own haven, isn’t that true~? 
+
+Frozen: But I can give you this, if it fits your taste. 
+
+Player: Oh… thank you. 
+
+Frozen: Quit the sad face, dear. Soon enough you’ll find a place to call your own. 
+
+Frozen: Now, I need something to film aerial footage. Ugh, where did that thing go… 
+"
+text_alt_2 = "Frozen: Where the hell did you find my drone? 
+
+Frozen: I’ve been looking for this for days! 
+
+Player: It was just by your neighbor’s backyard. 
+
+Frozen: Oh, that ridiculous man. Making shows everywhere, not valuing his own art. 
+
+Frozen: I would never get close to his backyard. I’m glad I had you to do this for me. 
+
+Player: Oh, sure. I didn’t know you weren’t fond of the guy, though.
+
+Frozen: I’m certainly not. So thank you for that. 
+
+Frozen: Take this mask. It’s an original piece I made for one of my biggest plays. 
+
+Player: I’m sure I’ll put it to good use. 
+
+Frozen: Ha! Now, to start filming!! 
+"
+item_given_on_first_text = "Mirror"
+item_given_on_second_text = "Mask"
 item_given_on_third_text = ""
 
 [node name="Sprite" parent="." index="3" instance=ExtResource( 3 )]

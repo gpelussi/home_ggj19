@@ -22,8 +22,67 @@ shape = SubResource( 1 )
 
 [node name="InteractionEvent" parent="Interaction" index="1" instance=ExtResource( 2 )]
 
-item_given_on_first_text = ""
-item_given_on_second_text = ""
+first_needed_item = "Stethoscope"
+second_needed_item = "Chestnut"
+text_alt_1 = "Metal: No way! It’s that thing you use to listen to heartbeats! 
+
+Metal: I’ve been needin’ one to compose my next gig.
+
+Player: Yes. It’s a stethoscope.
+
+Metal: Yea! A stocoscope, this thingy. 
+
+Metal: Man, I really needed this for my music. I dont have much...
+
+Metal: I’m just a mason with a dream. 
+
+Metal: Maybe this song I wanna compose will turn me into a rock star! 
+
+Player: It’s okay! You can have it. It’s no use to me at all! I’m just looking for a home. 
+
+Metal: A home?! Well, I happen to build homes! 
+
+Metal: We can talk after I become a famous rock star, then I’ll build you a house as well! 
+
+Player: Oh, sure. I can… wait… 
+
+Metal: While that doesn’t happen… here! 
+
+Metal: Have this sack of Kal, cause that’s what I can give you now. 
+"
+text_alt_2 = "Player: So… you said you needed something to save your music records.
+
+Metal: What? You got anything?! 
+
+Player: Yes! I got this pen-drive. It has a lot of good things to study as well, 
+
+Player: but you can use it to put your song.
+ 
+Metal: Really? This little thing can fit a whole song?! 
+
+Metal: God, I need to know more about such technologies. 
+
+Metal: I will take it, yes!! You know, 
+
+Metal: bet thing about building houses to people is their gratitude. 
+
+Metal: A lot of clients of mine come to my shows as a thank you for making their homes. 
+
+Metal: Gratitude. Thank you, seriously.
+
+Player: Hey, no problem. 
+
+Metal: This tech-thingy fell in my backyard ‘couple days ago. 
+
+Metal: Here. Have it as my gratitude. 
+
+Metal: I don’t even know what it is but maybe it’s valuable.
+ 
+Player: Oh god. I think I know who this belongs to. 
+
+"
+item_given_on_first_text = "Lime"
+item_given_on_second_text = "Drone"
 item_given_on_third_text = ""
 
 [node name="Sprite" parent="." index="3" instance=ExtResource( 3 )]

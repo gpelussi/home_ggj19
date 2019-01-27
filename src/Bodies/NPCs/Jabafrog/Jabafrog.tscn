@@ -22,8 +22,50 @@ shape = SubResource( 1 )
 
 [node name="InteractionEvent" parent="Interaction" index="1" instance=ExtResource( 2 )]
 
-item_given_on_first_text = ""
-item_given_on_second_text = ""
+first_needed_item = "Coin"
+second_needed_item = "Fish"
+text_alt_1 = "Jaba: Howdy! I see you got some coins in there, partner. 
+
+Jaba: Wanna take home one of the finest spice of the Desert? 
+
+Player: Yeah, why not?! 
+
+Jaba: Here, take one. This lil’ creatures are my life. 
+
+Jaba: Growing Lizards’ been the family business since two generations ago. 
+
+Jaba: One day I’ll grow so many of them, that I could give to those who starve here in the sands. 
+
+Jaba: I wish I could find good food so they’d grow lots. Food that’d make them happy, ya know? 
+"
+text_alt_2 = "Player: Howdy! 
+
+Jaba: Heya there, pal. What’s this big fish ya’ carrying now?! 
+
+Player: Well, you said you needed something better for your lizards to eat,
+
+Player: so they would grow bigger and better. I found this.
+
+Jaba: Ya serious?! This gon’ be amazing! I’ll feed’em right away. 
+
+Jaba: Geez… I never knew I would finally be able to help those poor kids. 
+
+Jaba: I owe you big time, pal. 
+
+Player: No need to worry. I’m just looking for a home. 
+
+Jaba: Well, aren’t we all? But hey, home is where you share, where you help people. 
+
+Jaba: And ya doing it. Ya helping a whole lotta people, aren’t ya? 
+
+Player: Yeah… I guess so. 
+
+Jaba: Then don’t worry a bit. And take this! Might be somehow useful to ya. 
+
+Jaba: With the knew lizard food you gave me I won’t need it anymore. 
+"
+item_given_on_first_text = "Lizard"
+item_given_on_second_text = "Rake"
 item_given_on_third_text = ""
 
 [node name="Sprite" parent="." index="3" instance=ExtResource( 3 )]

@@ -25,8 +25,41 @@ shape = SubResource( 1 )
 text_default = "Bzzzzzzz!
 
 Znackzz... pleazzz"
-item_given_on_first_text = ""
-item_given_on_second_text = ""
+text_alt_1 = "Beetle: You zeem new around here. Wanna buy zome zouvenirz?
+
+Player: I am! I'm looking for a place to stay. I don't know if I have this planet's currency. 
+
+Beetle: I can't leave the dezertz to go to other worldz, 
+
+Beetle:Bzzz, so if you deliver zomething to me, I can give you coinz.
+
+Player: That would help me a lot! 
+
+Beetle: Here, take thiz to Penguin.
+"
+text_alt_2 = "Player: Hey! Remember me? 
+
+Beetle: Bzz… Of courze… You’ve been helping a lot of people. 
+
+Beetle: You helped me, bzz.
+
+Player: Yeah! It’s been a little while, but I brang you some stuff. 
+
+Player: I believe it might help your sales.
+
+Beetle: Bzzz! It’z a Zaw! And a Mazk! 
+
+Beetle: Theze muzt be worth a fortune out in the dezertz! 
+
+...
+
+Player: They should, right? Pretty odd items. 
+
+Beetle: Now I can dream again of ztaying with my daugtherz! Thank you for everything, ztranger…
+
+"
+item_given_on_first_text = "Calculator"
+item_given_on_second_text = "Coin"
 item_given_on_third_text = ""
 
 [node name="Sprite" parent="." index="3" instance=ExtResource( 3 )]
