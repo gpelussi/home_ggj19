@@ -13,7 +13,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 20, 14 )
 
-[node name="Jabafrog" instance=ExtResource( 1 )]
+[node name="Jabafrog" index="0" instance=ExtResource( 1 )]
 
 [node name="HitBox" parent="." index="0"]
 
@@ -38,14 +38,7 @@ check_if_player_has_item = 1
 has_item = "Coin"
 check_if_npc_has_item = 0
 
-[node name="GiftItem" parent="Interaction/InteractionEvent/Condition" index="0" instance=ExtResource( 5 )]
-
-item_to_give = "Coin"
-who_to_give_item_to = "Jabafrog"
-
-[node name="AwardItem" parent="Interaction/InteractionEvent/Condition" index="1" instance=ExtResource( 6 )]
-
-[node name="TextBox" parent="Interaction/InteractionEvent/Condition" index="2" instance=ExtResource( 3 )]
+[node name="TextBox" parent="Interaction/InteractionEvent/Condition" index="0" instance=ExtResource( 3 )]
 
 dialogue_text = "Jaba: Howdy! I see you got some coins in there, partner. 
 
@@ -66,23 +59,20 @@ Jaba: I wish I could find good food so they’d grow lots.
 Jaba: Food that’d make them happy, ya know? 
 "
 
+[node name="GiftItem" parent="Interaction/InteractionEvent/Condition" index="1" instance=ExtResource( 5 )]
+
+item_to_give = "Coin"
+who_to_give_item_to = "Jabafrog"
+
+[node name="AwardItem" parent="Interaction/InteractionEvent/Condition" index="2" instance=ExtResource( 6 )]
+
 [node name="Condition2" parent="Interaction/InteractionEvent" index="2" instance=ExtResource( 4 )]
 
-editor/display_folded = true
 check_if_player_has_item = 1
 has_item = "Fish"
 check_if_npc_has_item = 0
 
-[node name="GiftItem" parent="Interaction/InteractionEvent/Condition2" index="0" instance=ExtResource( 5 )]
-
-item_to_give = "Fish"
-who_to_give_item_to = "Jabafrog"
-
-[node name="AwardItem" parent="Interaction/InteractionEvent/Condition2" index="1" instance=ExtResource( 6 )]
-
-item_to_give = "Rake"
-
-[node name="TextBox" parent="Interaction/InteractionEvent/Condition2" index="2" instance=ExtResource( 3 )]
+[node name="TextBox" parent="Interaction/InteractionEvent/Condition2" index="0" instance=ExtResource( 3 )]
 
 dialogue_text = "Player: Howdy! 
 
@@ -112,6 +102,15 @@ Jaba: Then don’t worry a bit. And take this! Might be somehow useful to ya.
 
 Jaba: With the knew lizard food you gave me I won’t need it anymore. 
 "
+
+[node name="GiftItem" parent="Interaction/InteractionEvent/Condition2" index="1" instance=ExtResource( 5 )]
+
+item_to_give = "Fish"
+who_to_give_item_to = "Jabafrog"
+
+[node name="AwardItem" parent="Interaction/InteractionEvent/Condition2" index="2" instance=ExtResource( 6 )]
+
+item_to_give = "Rake"
 
 [node name="Sprite" parent="." index="3" instance=ExtResource( 7 )]
 

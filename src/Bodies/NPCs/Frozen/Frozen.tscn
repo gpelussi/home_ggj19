@@ -33,16 +33,11 @@ dialogue_text = "Frozen: My costume! I need something to wear!
 
 [node name="Condition" parent="Interaction/InteractionEvent" index="1" instance=ExtResource( 4 )]
 
-editor/display_folded = true
 check_if_player_has_item = 1
 has_item = "Kigurumi"
 check_if_npc_has_item = 0
 
-[node name="AwardItem" parent="Interaction/InteractionEvent/Condition" index="0" instance=ExtResource( 5 )]
-
-item_to_give = "Mirror"
-
-[node name="TextBox" parent="Interaction/InteractionEvent/Condition" index="1" instance=ExtResource( 3 )]
+[node name="TextBox" parent="Interaction/InteractionEvent/Condition" index="0" instance=ExtResource( 3 )]
 
 dialogue_text = "Frozen: Oh my my, what have we here~ 
 
@@ -75,22 +70,17 @@ Frozen: Now, I need something to film aerial footage.
 Frozen: Ugh, where did that thing go… 
 "
 
+[node name="AwardItem" parent="Interaction/InteractionEvent/Condition" index="1" instance=ExtResource( 5 )]
+
+item_to_give = "Mirror"
+
 [node name="Condition2" parent="Interaction/InteractionEvent" index="2" instance=ExtResource( 4 )]
 
 check_if_player_has_item = 1
 has_item = "Drone"
 check_if_npc_has_item = 0
 
-[node name="GiftItem" parent="Interaction/InteractionEvent/Condition2" index="0" instance=ExtResource( 6 )]
-
-item_to_give = "Drone"
-who_to_give_item_to = "Frozen"
-
-[node name="AwardItem" parent="Interaction/InteractionEvent/Condition2" index="1" instance=ExtResource( 5 )]
-
-item_to_give = "Mask"
-
-[node name="TextBox" parent="Interaction/InteractionEvent/Condition2" index="2" instance=ExtResource( 3 )]
+[node name="TextBox" parent="Interaction/InteractionEvent/Condition2" index="0" instance=ExtResource( 3 )]
 
 dialogue_text = "Frozen: Where the hell did you find my drone? 
 
@@ -114,6 +104,15 @@ Player: I’m sure I’ll put it to good use.
 
 Frozen: Ha! Now, to start filming!! 
 "
+
+[node name="GiftItem" parent="Interaction/InteractionEvent/Condition2" index="1" instance=ExtResource( 6 )]
+
+item_to_give = "Drone"
+who_to_give_item_to = "Frozen"
+
+[node name="AwardItem" parent="Interaction/InteractionEvent/Condition2" index="2" instance=ExtResource( 5 )]
+
+item_to_give = "Mask"
 
 [node name="Sprite" parent="." index="3" instance=ExtResource( 7 )]
 

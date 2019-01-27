@@ -33,21 +33,11 @@ dialogue_text = "Player: This fox is looking at a pile of dirt on the ground.
 
 [node name="Condition" parent="Interaction/InteractionEvent" index="1" instance=ExtResource( 4 )]
 
-editor/display_folded = true
 check_if_player_has_item = 1
 has_item = "Shovel"
 check_if_npc_has_item = 0
 
-[node name="GiftItem" parent="Interaction/InteractionEvent/Condition" index="0" instance=ExtResource( 5 )]
-
-item_to_give = "Shovel"
-who_to_give_item_to = "Fox"
-
-[node name="AwardItem" parent="Interaction/InteractionEvent/Condition" index="1" instance=ExtResource( 6 )]
-
-item_to_give = "Stethoscope"
-
-[node name="TextBox" parent="Interaction/InteractionEvent/Condition" index="2" instance=ExtResource( 3 )]
+[node name="TextBox" parent="Interaction/InteractionEvent/Condition" index="0" instance=ExtResource( 3 )]
 
 dialogue_text = "Fox: Hey. You. 
 
@@ -86,22 +76,22 @@ Fox:  Now… to dissolve the corpses...
 Player: But aren’t you a doc-... Nevermind.
 "
 
+[node name="GiftItem" parent="Interaction/InteractionEvent/Condition" index="1" instance=ExtResource( 5 )]
+
+item_to_give = "Shovel"
+who_to_give_item_to = "Fox"
+
+[node name="AwardItem" parent="Interaction/InteractionEvent/Condition" index="2" instance=ExtResource( 6 )]
+
+item_to_give = "Stethoscope"
+
 [node name="Condition2" parent="Interaction/InteractionEvent" index="2" instance=ExtResource( 4 )]
 
 check_if_player_has_item = 1
 has_item = "Lime"
 check_if_npc_has_item = 0
 
-[node name="GiftItem" parent="Interaction/InteractionEvent/Condition2" index="0" instance=ExtResource( 5 )]
-
-item_to_give = "Lime"
-who_to_give_item_to = "Fox"
-
-[node name="AwardItem" parent="Interaction/InteractionEvent/Condition2" index="1" instance=ExtResource( 6 )]
-
-item_to_give = "Chainsaw"
-
-[node name="TextBox" parent="Interaction/InteractionEvent/Condition2" index="2" instance=ExtResource( 3 )]
+[node name="TextBox" parent="Interaction/InteractionEvent/Condition2" index="0" instance=ExtResource( 3 )]
 
 dialogue_text = "Player: I don’t know what I’m gettin into, 
 
@@ -147,8 +137,17 @@ Player: WAIT-!
 
 "
 
+[node name="GiftItem" parent="Interaction/InteractionEvent/Condition2" index="1" instance=ExtResource( 5 )]
+
+item_to_give = "Lime"
+who_to_give_item_to = "Fox"
+
+[node name="AwardItem" parent="Interaction/InteractionEvent/Condition2" index="2" instance=ExtResource( 6 )]
+
+item_to_give = "Chainsaw"
+
 [node name="Sprite" parent="." index="3" instance=ExtResource( 7 )]
 
-position = Vector2( 0.15778, 0 )
+position = Vector2( 0.31556, 0 )
 
 

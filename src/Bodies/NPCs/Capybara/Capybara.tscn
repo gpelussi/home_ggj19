@@ -28,26 +28,16 @@ shape = SubResource( 1 )
 
 [node name="TextBox" parent="Interaction/InteractionEvent" index="0" instance=ExtResource( 3 )]
 
-dialogue_text = "Samurai: おはようございます！
+dialogue_text = "Samurai: Ohayou Gozaimasu!
 "
 
 [node name="Condition" parent="Interaction/InteractionEvent" index="1" instance=ExtResource( 4 )]
 
-editor/display_folded = true
 check_if_player_has_item = 1
 has_item = "Mirror"
 check_if_npc_has_item = 0
 
-[node name="GiftItem" parent="Interaction/InteractionEvent/Condition" index="0" instance=ExtResource( 5 )]
-
-item_to_give = "Mirror"
-who_to_give_item_to = "Capybara"
-
-[node name="AwardItem" parent="Interaction/InteractionEvent/Condition" index="1" instance=ExtResource( 6 )]
-
-item_to_give = "Katana"
-
-[node name="TextBox" parent="Interaction/InteractionEvent/Condition" index="2" instance=ExtResource( 3 )]
+[node name="TextBox" parent="Interaction/InteractionEvent/Condition" index="0" instance=ExtResource( 3 )]
 
 dialogue_text = "Samurai: It is just like this one. 
 
@@ -81,22 +71,22 @@ Samurai: Thank you. Here, have the trinket of most honor to my family.
 
 "
 
+[node name="GiftItem" parent="Interaction/InteractionEvent/Condition" index="1" instance=ExtResource( 5 )]
+
+item_to_give = "Mirror"
+who_to_give_item_to = "Capybara"
+
+[node name="AwardItem" parent="Interaction/InteractionEvent/Condition" index="2" instance=ExtResource( 6 )]
+
+item_to_give = "Katana"
+
 [node name="Condition2" parent="Interaction/InteractionEvent" index="2" instance=ExtResource( 4 )]
 
 check_if_player_has_item = 1
 has_item = "Flower"
 check_if_npc_has_item = 0
 
-[node name="GiftItem" parent="Interaction/InteractionEvent/Condition2" index="0" instance=ExtResource( 5 )]
-
-item_to_give = "Flower"
-who_to_give_item_to = "Capybara"
-
-[node name="AwardItem" parent="Interaction/InteractionEvent/Condition2" index="1" instance=ExtResource( 6 )]
-
-item_to_give = "Shovel"
-
-[node name="TextBox" parent="Interaction/InteractionEvent/Condition2" index="2" instance=ExtResource( 3 )]
+[node name="TextBox" parent="Interaction/InteractionEvent/Condition2" index="0" instance=ExtResource( 3 )]
 
 dialogue_text = "Samurai: Could it be possible…?
 
@@ -122,6 +112,15 @@ Player: It’s okay! You can keep it, its just a sh-
 
 Samurai: Take. It. 
 "
+
+[node name="GiftItem" parent="Interaction/InteractionEvent/Condition2" index="1" instance=ExtResource( 5 )]
+
+item_to_give = "Flower"
+who_to_give_item_to = "Capybara"
+
+[node name="AwardItem" parent="Interaction/InteractionEvent/Condition2" index="2" instance=ExtResource( 6 )]
+
+item_to_give = "Shovel"
 
 [node name="Sprite" parent="." index="3" instance=ExtResource( 7 )]
 

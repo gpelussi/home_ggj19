@@ -13,7 +13,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 16, 16 )
 
-[node name="Cthulu" index="0" instance=ExtResource( 1 )]
+[node name="Cthulu" instance=ExtResource( 1 )]
 
 [node name="HitBox" parent="." index="0"]
 
@@ -37,16 +37,7 @@ check_if_player_has_item = 1
 has_item = "Lizard"
 check_if_npc_has_item = 0
 
-[node name="GiftItem" parent="Interaction/InteractionEvent/Condition" index="0" instance=ExtResource( 5 )]
-
-item_to_give = "Lizard"
-who_to_give_item_to = "Cthulu"
-
-[node name="AwardItem" parent="Interaction/InteractionEvent/Condition" index="1" instance=ExtResource( 6 )]
-
-item_to_give = "Book"
-
-[node name="TextBox" parent="Interaction/InteractionEvent/Condition" index="2" instance=ExtResource( 3 )]
+[node name="TextBox" parent="Interaction/InteractionEvent/Condition" index="0" instance=ExtResource( 3 )]
 
 dialogue_text = "Cultist: Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.
 
@@ -71,23 +62,22 @@ Cultist: It keeps secrets beyond mundane understandment.
 Cultist: Now… where could I find something to draw patterns on this volatile sand? 
 "
 
+[node name="GiftItem" parent="Interaction/InteractionEvent/Condition" index="1" instance=ExtResource( 5 )]
+
+item_to_give = "Lizard"
+who_to_give_item_to = "Cthulu"
+
+[node name="AwardItem" parent="Interaction/InteractionEvent/Condition" index="2" instance=ExtResource( 6 )]
+
+item_to_give = "Book"
+
 [node name="Condition2" parent="Interaction/InteractionEvent" index="2" instance=ExtResource( 4 )]
 
-editor/display_folded = true
 check_if_player_has_item = 1
 has_item = "Rake"
 check_if_npc_has_item = 0
 
-[node name="GiftItem" parent="Interaction/InteractionEvent/Condition2" index="0" instance=ExtResource( 5 )]
-
-item_to_give = "Rake"
-who_to_give_item_to = "Cthulu"
-
-[node name="AwardItem" parent="Interaction/InteractionEvent/Condition2" index="1" instance=ExtResource( 6 )]
-
-item_to_give = "Amulet"
-
-[node name="TextBox" parent="Interaction/InteractionEvent/Condition2" index="2" instance=ExtResource( 3 )]
+[node name="TextBox" parent="Interaction/InteractionEvent/Condition2" index="0" instance=ExtResource( 3 )]
 
 dialogue_text = "Cultist: This thing you are carrying, my dear, 
 
@@ -116,6 +106,15 @@ Cultist: You shall be saved with us, my dear.
 Cultist: Take this amulet with you and you might be protected. 
 
 "
+
+[node name="GiftItem" parent="Interaction/InteractionEvent/Condition2" index="1" instance=ExtResource( 5 )]
+
+item_to_give = "Rake"
+who_to_give_item_to = "Cthulu"
+
+[node name="AwardItem" parent="Interaction/InteractionEvent/Condition2" index="2" instance=ExtResource( 6 )]
+
+item_to_give = "Amulet"
 
 [node name="Sprite" parent="." index="2" instance=ExtResource( 7 )]
 
