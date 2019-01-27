@@ -12,7 +12,7 @@
 [ext_resource path="res://Bodies/Player/Player.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Bodies/NPCs/Portal/Portal.tscn" type="PackedScene" id=11]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 position = Vector2( 0, 600 )
 _sections_unfolded = [ "Transform", "Z Index" ]
