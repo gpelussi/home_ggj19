@@ -1,15 +1,19 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Bodies/NPCs/NPC.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Bodies/Components/InteractionEvent.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Bodies/NPCs/Jabafrog/Sprite.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Bodies/Components/Commands/TextBox.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Bodies/Components/Commands/Condition.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Bodies/Components/Commands/GiftItem.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Bodies/Components/Commands/AwardItem.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Bodies/NPCs/Jabafrog/Sprite.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 20, 14 )
 
-[node name="Jabafrog" index="0" instance=ExtResource( 1 )]
+[node name="Jabafrog" instance=ExtResource( 1 )]
 
 [node name="HitBox" parent="." index="0"]
 
@@ -22,9 +26,28 @@ shape = SubResource( 1 )
 
 [node name="InteractionEvent" parent="Interaction" index="1" instance=ExtResource( 2 )]
 
-first_needed_item = "Coin"
-second_needed_item = "Fish"
-text_alt_1 = "Jaba: Howdy! I see you got some coins in there, partner. 
+[node name="TextBox" parent="Interaction/InteractionEvent" index="0" instance=ExtResource( 3 )]
+
+_sections_unfolded = [ "Pause" ]
+dialogue_text = "Jaba: Howdy! Wanna buy some Lizards?
+"
+
+[node name="Condition" parent="Interaction/InteractionEvent" index="1" instance=ExtResource( 4 )]
+
+check_if_player_has_item = 1
+has_item = "Coin"
+check_if_npc_has_item = 0
+
+[node name="GiftItem" parent="Interaction/InteractionEvent/Condition" index="0" instance=ExtResource( 5 )]
+
+item_to_give = "Coin"
+who_to_give_item_to = "Jabafrog"
+
+[node name="AwardItem" parent="Interaction/InteractionEvent/Condition" index="1" instance=ExtResource( 6 )]
+
+[node name="TextBox" parent="Interaction/InteractionEvent/Condition" index="2" instance=ExtResource( 3 )]
+
+dialogue_text = "Jaba: Howdy! I see you got some coins in there, partner. 
 
 Jaba: Wanna take home one of the finest spice of the Desert? 
 
@@ -34,27 +57,52 @@ Jaba: Here, take one. This lil’ creatures are my life.
 
 Jaba: Growing Lizards’ been the family business since two generations ago. 
 
-Jaba: One day I’ll grow so many of them, that I could give to those who starve here in the sands. 
+Jaba: One day I’ll grow so many of them, 
 
-Jaba: I wish I could find good food so they’d grow lots. Food that’d make them happy, ya know? 
+Jaba: that I could give to those who starve here in the sands. 
+
+Jaba: I wish I could find good food so they’d grow lots. 
+
+Jaba: Food that’d make them happy, ya know? 
 "
-text_alt_2 = "Player: Howdy! 
+
+[node name="Condition2" parent="Interaction/InteractionEvent" index="2" instance=ExtResource( 4 )]
+
+editor/display_folded = true
+check_if_player_has_item = 1
+has_item = "Fish"
+check_if_npc_has_item = 0
+
+[node name="GiftItem" parent="Interaction/InteractionEvent/Condition2" index="0" instance=ExtResource( 5 )]
+
+item_to_give = "Fish"
+who_to_give_item_to = "Jabafrog"
+
+[node name="AwardItem" parent="Interaction/InteractionEvent/Condition2" index="1" instance=ExtResource( 6 )]
+
+item_to_give = "Rake"
+
+[node name="TextBox" parent="Interaction/InteractionEvent/Condition2" index="2" instance=ExtResource( 3 )]
+
+dialogue_text = "Player: Howdy! 
 
 Jaba: Heya there, pal. What’s this big fish ya’ carrying now?! 
 
-Player: Well, you said you needed something better for your lizards to eat,
+Jaba: Ya Been ‘round everywhere, huh?
 
-Player: so they would grow bigger and better. I found this.
+Player: Well, you said you needed something better for your lizards to eat, 
 
-Jaba: Ya serious?! This gon’ be amazing! I’ll feed’em right away. 
+Jaba: so they would grow bigger and better. I found this.
 
-Jaba: Geez… I never knew I would finally be able to help those poor kids. 
+Jaba: Ya serious?! This gon’ be amazing! I’ll feed’em right away. Geez… 
+
+Jaba: I never knew I would finally be able to help those poor kids. 
 
 Jaba: I owe you big time, pal. 
 
 Player: No need to worry. I’m just looking for a home. 
 
-Jaba: Well, aren’t we all? But hey, home is where you share, where you help people. 
+Jaba: Well, aren’t we all? But hey, home is where you share, where you help people.
 
 Jaba: And ya doing it. Ya helping a whole lotta people, aren’t ya? 
 
@@ -64,10 +112,7 @@ Jaba: Then don’t worry a bit. And take this! Might be somehow useful to ya.
 
 Jaba: With the knew lizard food you gave me I won’t need it anymore. 
 "
-item_given_on_first_text = "Lizard"
-item_given_on_second_text = "Rake"
-item_given_on_third_text = ""
 
-[node name="Sprite" parent="." index="3" instance=ExtResource( 3 )]
+[node name="Sprite" parent="." index="3" instance=ExtResource( 7 )]
 
 

@@ -1,8 +1,12 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Bodies/NPCs/NPC.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Bodies/Components/InteractionEvent.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Bodies/NPCs/Beetle/Sprite.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Bodies/Components/Commands/Condition.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Bodies/Components/Commands/TextBox.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Bodies/Components/Commands/AwardItem.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Bodies/Components/Commands/GiftItem.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Bodies/NPCs/Beetle/Sprite.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -22,12 +26,20 @@ shape = SubResource( 1 )
 
 [node name="InteractionEvent" parent="Interaction" index="1" instance=ExtResource( 2 )]
 
-text_default = "Bzzzzzzz!
+[node name="Condition" parent="Interaction/InteractionEvent" index="0" instance=ExtResource( 3 )]
 
-Znackzz... pleazzz"
-text_alt_1 = "Beetle: You zeem new around here. Wanna buy zome zouvenirz?
+check_if_player_has_item = 0
+check_if_npc_has_item = 2
+npc_which = "Beetle"
+npc_which_item = "Block"
 
-Player: I am! I'm looking for a place to stay. I don't know if I have this planet's currency. 
+[node name="TextBox" parent="Interaction/InteractionEvent/Condition" index="0" instance=ExtResource( 4 )]
+
+dialogue_text = "Beetle: You zeem new around here. Wanna buy zome zouvenirz?
+
+Player: I am! I'm looking for a place to stay. 
+
+Player: But I don't know if I have this planet's currency. 
 
 Beetle: I can't leave the dezertz to go to other worldz, 
 
@@ -37,9 +49,62 @@ Player: That would help me a lot!
 
 Beetle: Here, take thiz to Penguin.
 "
-text_alt_2 = "Player: Hey! Remember me? 
 
-Beetle: Bzz… Of courze… You’ve been helping a lot of people. 
+[node name="AwardItem" parent="Interaction/InteractionEvent/Condition" index="1" instance=ExtResource( 5 )]
+
+_sections_unfolded = [ "Pause" ]
+item_to_give = "Calculator"
+
+[node name="GiftItem" parent="Interaction/InteractionEvent/Condition" index="2" instance=ExtResource( 6 )]
+
+item_to_give = "Block"
+who_to_give_item_to = "Beetle"
+
+[node name="Condition2" parent="Interaction/InteractionEvent" index="1" instance=ExtResource( 3 )]
+
+check_if_player_has_item = 1
+has_item = "Calculator"
+check_if_npc_has_item = 0
+
+[node name="TextBox" parent="Interaction/InteractionEvent/Condition2" index="0" instance=ExtResource( 4 )]
+
+dialogue_text = "Player: Do you need anything else? 
+
+Beetle: Oh! I'm alwayz in need of exotic itemz for clientz all around the dezertz. 
+
+Beetle: If you come acrozz zomething called… a Zaw… 
+
+Beetle: I’m looking for one of thoze, yez.
+
+Beetle: Zelling thiz zpecial requezt would help me afford to zee my daughterz again. 
+
+Beetle: I mizz them back home.
+"
+
+[node name="AwardItem" parent="Interaction/InteractionEvent/Condition2" index="1" instance=ExtResource( 5 )]
+
+item_to_give = "Coin"
+
+[node name="Condition3" parent="Interaction/InteractionEvent" index="2" instance=ExtResource( 3 )]
+
+check_if_player_has_item = 0
+check_if_npc_has_item = 0
+
+[node name="GiftItem" parent="Interaction/InteractionEvent/Condition3" index="0" instance=ExtResource( 6 )]
+
+item_to_give = "Chainsaw"
+who_to_give_item_to = "Beetle"
+
+[node name="GiftItem2" parent="Interaction/InteractionEvent/Condition3" index="1" instance=ExtResource( 6 )]
+
+item_to_give = "Mask"
+who_to_give_item_to = "Beetle"
+
+[node name="TextBox" parent="Interaction/InteractionEvent/Condition3" index="2" instance=ExtResource( 4 )]
+
+dialogue_text = "Player: Hey! Remember me? 
+
+Beetle: Bzz… Of courze… You’ve been helping a lot of people.
 
 Beetle: You helped me, bzz.
 
@@ -51,17 +116,13 @@ Beetle: Bzzz! It’z a Zaw! And a Mazk!
 
 Beetle: Theze muzt be worth a fortune out in the dezertz! 
 
-...
-
 Player: They should, right? Pretty odd items. 
 
-Beetle: Now I can dream again of ztaying with my daugtherz! Thank you for everything, ztranger…
+Beetle: Now I can dream again of ztaying with my daugtherz! 
 
+Beetle: Thank you for everything, ztranger…!
 "
-item_given_on_first_text = "Calculator"
-item_given_on_second_text = "Coin"
-item_given_on_third_text = ""
 
-[node name="Sprite" parent="." index="3" instance=ExtResource( 3 )]
+[node name="Sprite" parent="." index="3" instance=ExtResource( 7 )]
 
 

@@ -18,7 +18,6 @@ var planet_names =["DesertCompass","FreezeCompass","EarthCompass"]
 func _ready():
 	for planetstring in planet_names:
 		get_node(planetstring).hide()
-	get_node("DesertCompass").show()
 	set_process_input(false)
 	yield(open_animation_player, "animation_finished")
 	press_start_animation_player.play("Auto")

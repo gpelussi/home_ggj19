@@ -1,15 +1,19 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Bodies/NPCs/NPC.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Bodies/Components/InteractionEvent.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Bodies/NPCs/Capybara/Sprite.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Bodies/Components/Commands/TextBox.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Bodies/Components/Commands/Condition.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Bodies/Components/Commands/GiftItem.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Bodies/Components/Commands/AwardItem.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Bodies/NPCs/Capybara/Sprite.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="Capybara" index="0" instance=ExtResource( 1 )]
+[node name="Capybara" instance=ExtResource( 1 )]
 
 [node name="HitBox" parent="." index="0"]
 
@@ -22,13 +26,34 @@ shape = SubResource( 1 )
 
 [node name="InteractionEvent" parent="Interaction" index="1" instance=ExtResource( 2 )]
 
-first_needed_item = "Mirror"
-second_needed_item = "Flower"
-text_alt_1 = "Samurai: It is just like this one. 
+[node name="TextBox" parent="Interaction/InteractionEvent" index="0" instance=ExtResource( 3 )]
+
+dialogue_text = "Samurai: おはようございます！
+"
+
+[node name="Condition" parent="Interaction/InteractionEvent" index="1" instance=ExtResource( 4 )]
+
+editor/display_folded = true
+check_if_player_has_item = 1
+has_item = "Mirror"
+check_if_npc_has_item = 0
+
+[node name="GiftItem" parent="Interaction/InteractionEvent/Condition" index="0" instance=ExtResource( 5 )]
+
+item_to_give = "Mirror"
+who_to_give_item_to = "Capybara"
+
+[node name="AwardItem" parent="Interaction/InteractionEvent/Condition" index="1" instance=ExtResource( 6 )]
+
+item_to_give = "Katana"
+
+[node name="TextBox" parent="Interaction/InteractionEvent/Condition" index="2" instance=ExtResource( 3 )]
+
+dialogue_text = "Samurai: It is just like this one. 
 
 Player: What? The mirror?
 
-Samurai: Yes. It’s exactly the one my beloved Yuki adored...
+Samurai: Yes. It’s exactly the one my beloved Yuki adored, 
 
 Samurai: when she was still here among us. 
 
@@ -53,20 +78,39 @@ Samurai: It still has her light to it. Now if only I could find that blue flower
 Samurai: I’ll hold on to this gift dearly, my friend. 
 
 Samurai: Thank you. Here, have the trinket of most honor to my family. 
+
 "
-text_alt_2 = "Samurai: Could it be possible…?
+
+[node name="Condition2" parent="Interaction/InteractionEvent" index="2" instance=ExtResource( 4 )]
+
+check_if_player_has_item = 1
+has_item = "Flower"
+check_if_npc_has_item = 0
+
+[node name="GiftItem" parent="Interaction/InteractionEvent/Condition2" index="0" instance=ExtResource( 5 )]
+
+item_to_give = "Flower"
+who_to_give_item_to = "Capybara"
+
+[node name="AwardItem" parent="Interaction/InteractionEvent/Condition2" index="1" instance=ExtResource( 6 )]
+
+item_to_give = "Shovel"
+
+[node name="TextBox" parent="Interaction/InteractionEvent/Condition2" index="2" instance=ExtResource( 3 )]
+
+dialogue_text = "Samurai: Could it be possible…?
 
 Player: Yes, it could. I’m getting pretty good at finding people’s stuff. 
 
 Samurai: It’s the actual flower. Look, Yuki… The Moonflake… 
 
-Samurai: Now I can put it back to our garden! 
+Samurai:Now I can put it back to our garden! 
 
 Player: I hope it brings you joy. 
 
-Samurai: My garden shines brighter with Yuki’s light since you appeared, my friend.
+Samurai: My garden shines brighter with Yuki’s light since you appeared, my friend. 
 
-Samurai:  I have no words to thank you. 
+Samurai: I have no words to thank you. 
 
 Player: No need.
 
@@ -77,13 +121,8 @@ Samurai: It belonged to the garden, so it couldn’t be more valuable.
 Player: It’s okay! You can keep it, its just a sh-
 
 Samurai: Take. It. 
-
-Player: O-k...
 "
-item_given_on_first_text = "Katana"
-item_given_on_second_text = ""
-item_given_on_third_text = ""
 
-[node name="Sprite" parent="." index="3" instance=ExtResource( 3 )]
+[node name="Sprite" parent="." index="3" instance=ExtResource( 7 )]
 
 
