@@ -12,9 +12,6 @@ func _ready():
 	textbox.connect("dialogue_finished", self, "enable_action")
 	player_input.register_player(get_parent())
 
-func _exit_tree():
-	player_input.deregister_player()
-
 func _physics_process(delta):
 	if active:
 		if Input.is_action_pressed("DIR_RIGHT"):

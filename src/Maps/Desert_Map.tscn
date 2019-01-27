@@ -11,7 +11,7 @@
 [ext_resource path="res://Bodies/NPCs/Jabafrog/Jabafrog.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Bodies/Player/Player.tscn" type="PackedScene" id=10]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 position = Vector2( 0, 600 )
 _sections_unfolded = [ "Transform", "Z Index" ]

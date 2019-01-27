@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Bodies/Components/Commands/Condition.gd" type="Script" id=1]
+
+[node name="Condition" type="Node" index="0"]
+
+script = ExtResource( 1 )
+needs_item = false
+has_item = ""
+npc_needs_item = false
+npc_which = ""
+npc_which_item = ""
+
+
