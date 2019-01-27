@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/TileSets/Desert Houses/Desert_Floor.tres" type="TileSet" id=1]
 [ext_resource path="res://Assets/Sprites/DesertScenario/desert npc3 house.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Sprites/DesertScenario/desert npc2 house.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Sprites/DesertScenario/desert npc1 house.png" type="Texture" id=4]
-[ext_resource path="res://Bodies/Player/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Bodies/NPCs/Cthulu/Cthulu.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Bodies/NPCs/Beetle/Beetle.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Bodies/Player/Player.tscn" type="PackedScene" id=7]
 
 [node name="Node2D" type="Node2D" index="0"]
 
@@ -83,12 +85,20 @@ texture = ExtResource( 3 )
 position = Vector2( 370, -233 )
 texture = ExtResource( 4 )
 
-[node name="Player" parent="." index="5" instance=ExtResource( 5 )]
+[node name="Cthulu" parent="." index="5" instance=ExtResource( 5 )]
+
+position = Vector2( 380, -200 )
+
+[node name="Beetle" parent="." index="6" instance=ExtResource( 6 )]
+
+position = Vector2( 110, -190 )
+
+[node name="Player" parent="." index="7" instance=ExtResource( 7 )]
 
 position = Vector2( 170, -270 )
 _sections_unfolded = [ "Collision", "Transform" ]
 
-[node name="Floor background2" type="TileMap" parent="." index="6"]
+[node name="Floor background2" type="TileMap" parent="." index="8"]
 
 mode = 0
 tile_set = ExtResource( 1 )
