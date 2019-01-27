@@ -1,6 +1,5 @@
 extends Node
 
-
 signal set_screen
 
 onready var loading_screen = get_node("/root/LoadingScreen")
