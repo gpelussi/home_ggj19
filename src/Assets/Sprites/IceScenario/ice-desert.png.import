@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sky-earth.png-af3112f76234c6bac41898eac9de9e9a.stex"
+path="res://.import/ice-desert.png-572eb8d2d1dd32c59e79e373edbe2e50.stex"
 
 [deps]
 
-source_file="res://sky-earth.png"
-dest_files=[ "res://.import/sky-earth.png-af3112f76234c6bac41898eac9de9e9a.stex" ]
+source_file="res://Assets/Sprites/IceScenario/ice-desert.png"
+dest_files=[ "res://.import/ice-desert.png-572eb8d2d1dd32c59e79e373edbe2e50.stex" ]
 
 [params]
 

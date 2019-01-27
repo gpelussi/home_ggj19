@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ice-desert.png-bf8bc4268cfca20886e5e08ec8895be9.stex"
+path="res://.import/paralax-2.png-84d5fa56d34fb31befaca495e4dfa87c.stex"
 
 [deps]
 
-source_file="res://ice-desert.png"
-dest_files=[ "res://.import/ice-desert.png-bf8bc4268cfca20886e5e08ec8895be9.stex" ]
+source_file="res://Assets/Sprites/DesertScenario/paralax-2.png"
+dest_files=[ "res://.import/paralax-2.png-84d5fa56d34fb31befaca495e4dfa87c.stex" ]
 
 [params]
 
