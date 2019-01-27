@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Assets/Sprites/DesertScenario/sky-desert.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Sprites/DesertScenario/paralax-2.png" type="Texture" id=2]
@@ -11,8 +11,9 @@
 [ext_resource path="res://Bodies/NPCs/Jabafrog/Jabafrog.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Bodies/Player/Player.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Bodies/NPCs/Portal/Portal.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Assets/BGM/Caravan (desert).ogg" type="AudioStream" id=12]
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 position = Vector2( 0, 600 )
 _sections_unfolded = [ "Transform", "Z Index" ]
@@ -141,5 +142,14 @@ _sections_unfolded = [ "Collision", "Transform" ]
 [node name="NPC" parent="." index="12" instance=ExtResource( 11 )]
 
 position = Vector2( 230, -230 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="13"]
+
+stream = ExtResource( 12 )
+volume_db = 1.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
 
 
