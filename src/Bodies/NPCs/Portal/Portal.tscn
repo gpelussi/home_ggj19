@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Bodies/NPCs/NPC.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Bodies/Components/InteractionEvent.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Bodies/NPCs/Portal/Sprite.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Bodies/Components/Commands/ChangeScreen.gd" type="Script" id=3]
+[ext_resource path="res://Bodies/NPCs/Portal/Sprite.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -25,10 +26,13 @@ shape = SubResource( 1 )
 
 [node name="Node" type="Node" parent="Interaction/InteractionEvent" index="0"]
 
+script = ExtResource( 3 )
+screen_path = "res://HomeScreen/HomeScreen.tscn"
+
 [node name="TalkIcon" parent="." index="2"]
 
 position = Vector2( 0, -35 )
 
-[node name="Sprite" parent="." index="3" instance=ExtResource( 3 )]
+[node name="Sprite" parent="." index="3" instance=ExtResource( 4 )]
 
 

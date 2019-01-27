@@ -6,6 +6,8 @@ onready var database = get_node("/root/Database")
 onready var inventory = get_node("/root/Inventory")
 onready var textbox = get_node("/root/Hud/TextBox")
 onready var player_input = get_node("/root/PlayerInput")
+onready var screen_screamer = get_node("/root/ScreenScreamer")
+
 
 var run_recursive = true
 
