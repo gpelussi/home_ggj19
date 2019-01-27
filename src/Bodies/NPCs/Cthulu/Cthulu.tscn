@@ -9,7 +9,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 16, 16 )
 
-[node name="Cthulu" instance=ExtResource( 1 )]
+[node name="Cthulu" index="0" instance=ExtResource( 1 )]
 
 [node name="HitBox" parent="." index="0"]
 
@@ -22,7 +22,55 @@ shape = SubResource( 1 )
 
 [node name="InteractionEvent" parent="Interaction" index="1" instance=ExtResource( 2 )]
 
-text_default = "ASKJDLAFKJ"
+first_needed_item = "Gecko"
+second_needed_item = "Book"
+text_default = "Default text before item"
+text_alt_1 = "Cultist: Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.
+
+Player: Excuse me?
+
+Cultist: Oh, pardon me. It’s nothing. I see you carry with yourself a peculiar reptile.
+
+Cultist: Mind if I keep it?
+
+Player: Hm… Sure. I heard it’s the finest spice of the deserts.
+
+Cultist: Spice?! Oh no, my dear.
+
+Cultist: This shall be the perfect vessel to Our Lord and Saviour.
+
+Player: ...Okay…
+
+Cultist: Here, have this book as a token of my gratitude.
+
+Cultist: It keeps secrets beyond mundane understandment.
+
+Cultist: Now… where could I find something to draw patterns on this volatile sand? "
+text_alt_2 = "Cultist: This thing you are carrying, my dear...
+
+Cultist: I can write symbols on the sand with it, can’t I?
+
+Player: Um… I think so?
+
+Cultist: Good. Then it shall serve me well. Can I have it?
+
+Cultist: Of course, you’ll be rewarded. 
+
+Player: Of course. What will you write with it?
+
+Cultist: The ritual’s chant, so the Elder One might join us in this world.
+
+Cultist: I moved to this planet after hearing about its origins and
+
+Cultist: supernatural connections. Here, my home is closer to my beliefs.
+
+Player: I’d rather not ask anything else. But sounds fun!
+
+Player: Good luck with your new home… and your ritual. 
+
+Cultist: You shall be saved with us, my dear.
+
+Cultist: Take this amulet with you and you might be protected."
 item_given_on_first_text = "Amulet"
 item_given_on_second_text = ""
 item_given_on_third_text = ""
