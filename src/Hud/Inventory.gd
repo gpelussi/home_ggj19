@@ -35,8 +35,5 @@ func unbling_item(item):
 		var icon = get_node(item)
 		icon.queue_free()
 
-func screen_changed(screen_name):
-	if screen_name == "game":
-		show()
-	else:
-		hide()
+func screen_changed():
+	show()
