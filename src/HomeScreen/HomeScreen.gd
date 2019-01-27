@@ -8,6 +8,7 @@ onready var title = get_node("Title")
 onready var open_animation_player = get_node("Title/AnimationPlayer")
 onready var press_start_animation_player = get_node("Label/AnimationPlayer")
 onready var screen_screamer = get_node("/root/ScreenScreamer")
+onready var label = get_node("Label")
 onready var root = get_tree().get_root()
 
 var choosing_planet = false
@@ -34,20 +35,23 @@ func _input(event):
 					2:
 						start_game(FURRIA)
 		if event.is_action_pressed("DIR_RIGHT"):
-			planet = (planet + 1) %3
-			for planetstring in planet_names:
-				get_node(planetstring).hide()
-			get_node(planet_names[planet]).show()
+			planet = (planet + 1) % 3
+			update_cursor()
 		if event.is_action_pressed("DIR_LEFT"):
-			planet = (planet - 1) %3
-			for planetstring in planet_names:
-				get_node(planetstring).hide()
-			get_node(planet_names[planet]).show()
+			planet = (planet - 1) % 3
+			update_cursor()
 	else:
 		if event.is_action_pressed("ACTION_CONFIRM"):
 			choosing_planet = true
+			update_cursor()
 			title.hide()
-
+			press_start_animation_player.hide()
+			press_start_animation_player.stop()
 func start_game(world):
 		set_process_input(false)
 		screen_screamer.set_screen(world)
+
+func update_cursor():
+	for planetstring in planet_names:
+		get_node(planetstring).hide()
+	get_node(planet_names[planet]).show()

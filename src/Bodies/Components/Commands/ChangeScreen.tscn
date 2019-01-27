@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Bodies/Components/Commands/ChangeScreen.gd" type="Script" id=1]
 
-[node name="ChangeScreen" type="Node" index="0"]
+[node name="ChangeScreen" type="Node"]
 
 script = ExtResource( 1 )
 screen_path = null

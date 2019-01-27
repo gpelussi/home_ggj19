@@ -5,10 +5,6 @@
 [ext_resource path="res://Assets/Sprites/Hud/title.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Fonts/munro_16.tres" type="DynamicFont" id=4]
 
-
-
-
-
 [sub_resource type="Animation" id=1]
 
 resource_name = "Intro"
@@ -98,14 +94,14 @@ blend_times = [  ]
 
 [node name="Label" type="Label" parent="." index="2"]
 
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 30.0
-margin_top = 180.0
-margin_right = 390.0
-margin_bottom = 248.0
+margin_top = 190.0
+margin_right = 360.0
+margin_bottom = 250.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -133,6 +129,7 @@ blend_times = [  ]
 
 [node name="DesertCompass" type="Polygon2D" parent="." index="3"]
 
+visible = false
 position = Vector2( 40, 20 )
 polygon = PoolVector2Array( 30, 90, 40, 110, 50, 90 )
 uv = PoolVector2Array(  )
@@ -149,6 +146,7 @@ invert_border = 100.0
 
 [node name="FreezeCompass" type="Polygon2D" parent="." index="4"]
 
+visible = false
 position = Vector2( 174, 60 )
 polygon = PoolVector2Array( 30, 90, 40, 110, 20, 110 )
 uv = PoolVector2Array(  )
@@ -165,6 +163,7 @@ invert_border = 100.0
 
 [node name="EarthCompass" type="Polygon2D" parent="." index="5"]
 
+visible = false
 position = Vector2( 280, 110 )
 polygon = PoolVector2Array( 30, 90, 40, 110, 20, 110 )
 uv = PoolVector2Array(  )
