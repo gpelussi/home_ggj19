@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/cthulino.wav-b3e2ef6855626a273a4cb462f94ba679.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/desert/cthulino.wav"
+dest_files=[ "res://.import/cthulino.wav-b3e2ef6855626a273a4cb462f94ba679.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

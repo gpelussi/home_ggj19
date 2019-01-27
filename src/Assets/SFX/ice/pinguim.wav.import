@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/pinguim.wav-328dcbfd29c06119b1c17a6e3fb76ace.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/ice/pinguim.wav"
+dest_files=[ "res://.import/pinguim.wav-328dcbfd29c06119b1c17a6e3fb76ace.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

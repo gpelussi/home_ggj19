@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/fox.wav-a6a817a97b4df80995850fcbdb32f653.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/earth/fox.wav"
+dest_files=[ "res://.import/fox.wav-a6a817a97b4df80995850fcbdb32f653.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

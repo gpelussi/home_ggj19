@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/troca.wav-5d7d22ea2008f753d48d3b74918b2a46.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/player_menu/troca.wav"
+dest_files=[ "res://.import/troca.wav-5d7d22ea2008f753d48d3b74918b2a46.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

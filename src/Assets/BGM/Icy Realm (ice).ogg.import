@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Icy Realm (ice).ogg-0fc5490e08e2b01484e3b1ebd0b2bcd1.oggstr"
+
+[deps]
+
+source_file="res://Assets/BGM/Icy Realm (ice).ogg"
+dest_files=[ "res://.import/Icy Realm (ice).ogg-0fc5490e08e2b01484e3b1ebd0b2bcd1.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
