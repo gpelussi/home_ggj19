@@ -1,0 +1,157 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/TileSets/Desert Houses/chao 2.png" type="Texture" id=1]
+[ext_resource path="res://Assets/TileSets/Desert Houses/chao.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 8, 8 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="chao" type="Sprite" parent="." index="0"]
+
+position = Vector2( 4.311, 15.0545 )
+scale = Vector2( 1.15518, 1.46239 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="chao" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chao/StaticBody2D" index="0"]
+
+position = Vector2( -1.89785e-006, 0.0834844 )
+shape = SubResource( 1 )
+
+[node name="chao2" type="Sprite" parent="." index="1"]
+
+position = Vector2( 4.55517, 41.0589 )
+scale = Vector2( 1.15518, 1.46239 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 16, 0, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="chao2" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chao2/StaticBody2D" index="0"]
+
+position = Vector2( -0.211376, -0.0834833 )
+shape = SubResource( 1 )
+
+[node name="chao3" type="Sprite" parent="." index="2"]
+
+position = Vector2( 5.65395, 69.5051 )
+scale = Vector2( 1.15518, 1.46239 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 32, 0, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="chao4" type="Sprite" parent="." index="3"]
+
+position = Vector2( 5.42802, 98.6507 )
+scale = Vector2( 1.15518, 1.46239 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 48, 0, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="chao5" type="Sprite" parent="." index="4"]
+
+editor/display_folded = true
+position = Vector2( 5.65395, 130.96 )
+scale = Vector2( 1.15518, 1.46239 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 64, 0, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="chao5" index="0"]
+
+position = Vector2( -0.320764, 0.667871 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chao5/StaticBody2D" index="0"]
+
+position = Vector2( 0.105683, -0.592354 )
+shape = SubResource( 1 )
+
+[node name="chao6" type="Sprite" parent="." index="5"]
+
+position = Vector2( 5.65395, 164.397 )
+scale = Vector2( 1.15518, 1.46239 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 80, 0, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="chao6" index="0"]
+
+position = Vector2( -0.320764, 0.667871 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chao6/StaticBody2D" index="0"]
+
+position = Vector2( 0.105683, -0.592354 )
+shape = SubResource( 1 )
+
+[node name="chao7" type="Sprite" parent="." index="6"]
+
+position = Vector2( 5.84614, 196.491 )
+scale = Vector2( 1.15518, 1.46239 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 0, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="chao8" type="Sprite" parent="." index="7"]
+
+position = Vector2( 5.50558, 231.569 )
+scale = Vector2( 1.15518, 1.46239 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 80, 0, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="chao9" type="Sprite" parent="." index="8"]
+
+position = Vector2( 7.88951, 272.777 )
+scale = Vector2( 1.15518, 1.46239 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 0, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+
