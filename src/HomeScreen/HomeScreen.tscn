@@ -5,6 +5,10 @@
 [ext_resource path="res://Assets/Sprites/Hud/title.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Fonts/munro_16.tres" type="DynamicFont" id=4]
 
+
+
+
+
 [sub_resource type="Animation" id=1]
 
 resource_name = "Intro"
