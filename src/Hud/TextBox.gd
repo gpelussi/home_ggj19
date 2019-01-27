@@ -14,7 +14,6 @@ func _ready():
 
 func run_dialogue(text):
 	emit_signal("dialogue_started")
-	player_input.lock_input()
 	print(text)
 	var box_texts = text.split("\n\n")
 	show()
@@ -26,7 +25,6 @@ func run_dialogue(text):
 		yield(self, "dialogue_advanced")
 		set_process_input(false)
 	hide()
-	player_input.unlock_input()
 	emit_signal("dialogue_finished")
 
 func _input(event):

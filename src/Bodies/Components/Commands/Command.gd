@@ -10,6 +10,7 @@ onready var screen_screamer = get_node("/root/ScreenScreamer")
 
 
 var run_recursive = true
+var idx = 0
 
 func action():
 	pass
@@ -18,9 +19,16 @@ func run():
 	print("running %s" % get_name())
 	action()
 	if not run_recursive:
-		return emit_signal("command_done")
+		return
 	print("action done, running recursively")
-	for child in get_children():
-		child.run()
-		yield(child, "command_done")
-	emit_signal("command_done")
+	idx = 0
+	next()
+
+func next():
+	if idx >= get_child_count():
+		emit_signal("command_done")
+		return
+	var command = get_child(idx)
+	idx += 1
+	command.connect("command_done", self, "next", [], CONNECT_ONESHOT)
+	command.run()
