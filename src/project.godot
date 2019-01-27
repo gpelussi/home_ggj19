@@ -21,6 +21,8 @@ Inventory="*res://Persistence/Inventory.tscn"
 Database="*res://Database/Database.tscn"
 Hud="*res://Hud/Hud.tscn"
 LoadingScreen="*res://Misc/LoadingScreen.tscn"
+PlayerInput="*res://Misc/PlayerInput.gd"
+ScreenScreamer="*res://Misc/ScreenScreamer.gd"
 
 [debug]
 

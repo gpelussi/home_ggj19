@@ -10,6 +10,7 @@ func _ready():
 	body.connect("moved", self, "set_walk")
 	body.connect("talked", self, "set_talk")
 	body.connect("directed", self, "set_direction")
+	body.connect("fanfare", self, "set_fanfare")
 
 func set_idle():
 	animation_player.play("Idle")
@@ -19,6 +20,9 @@ func set_walk():
 
 func set_talk():
 	animation_player.play("Talk")
+
+func set_fanfare():
+	animation_player.play("Fanfare")
 
 func set_jump():
 	animation_player.play("Jump")

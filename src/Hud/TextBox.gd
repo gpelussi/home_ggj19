@@ -2,6 +2,7 @@ extends NinePatchRect
 
 onready var label = get_node("Label")
 onready var timer = get_node("Timer")
+onready var player_input = get_node("/root/PlayerInput")
 
 signal dialogue_started
 signal dialogue_finished
@@ -11,8 +12,10 @@ func _ready():
 	set_process_input(false)
 	hide()
 
-func on_trigger_dialogue(text):
+func run_dialogue(text):
 	emit_signal("dialogue_started")
+	player_input.lock_input()
+	print(text)
 	var box_texts = text.split("\n\n")
 	show()
 	for box_text in box_texts:
@@ -23,6 +26,7 @@ func on_trigger_dialogue(text):
 		yield(self, "dialogue_advanced")
 		set_process_input(false)
 	hide()
+	player_input.unlock_input()
 	emit_signal("dialogue_finished")
 
 func _input(event):

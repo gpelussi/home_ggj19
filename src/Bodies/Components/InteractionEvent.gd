@@ -1,7 +1,5 @@
 extends Node
 
-signal trigger_dialogue
-
 onready var database = get_node("/root/Database")
 onready var inventory = get_node("/root/Inventory")
 
@@ -24,7 +22,6 @@ var texts = []
 
 func _ready():
 	# connect with hud
-	connect("trigger_dialogue", textbox, "on_trigger_dialogue")
 	# needed items
 	if not first_needed_item.empty():
 		needed_items.append(first_needed_item)
@@ -53,10 +50,10 @@ func try_to_trigger():
 		if player_has_item(needed_item):
 			inventory.lose_item(needed_item)
 			inventory.increase_npc_text(npc_name)
-	award_item()
 	var dialogue_text = get_current_text()
-	print(dialogue_text)
-	emit_signal("trigger_dialogue", dialogue_text)
+	textbox.run_dialogue(dialogue_text)
+	yield(textbox, "dialogue_finished")
+	award_item()
 
 func award_item():
 	var index = inventory.get_npc_text(get_npc_name())
@@ -65,17 +62,14 @@ func award_item():
 			if given_items.has(item_given_on_first_text) and given_items[item_given_on_first_text]:
 				given_items[item_given_on_first_text] = false
 				inventory.gain_item(item_given_on_first_text)
-				print("awarding item: %s" % item_given_on_first_text)
 		1:
 			if given_items.has(item_given_on_second_text) and given_items[item_given_on_second_text]:
 				given_items[item_given_on_second_text] = false
 				inventory.gain_item(item_given_on_second_text)
-				print("awarding item: %s" % item_given_on_second_text)
 		2:
 			if given_items.has(item_given_on_third_text) and given_items[item_given_on_third_text]:
 				given_items[item_given_on_third_text] = false
 				inventory.gain_item(item_given_on_third_text)
-				print("awarding item: %s" % item_given_on_third_text)
 
 func get_npc_name():
 	return get_parent().get_parent().name

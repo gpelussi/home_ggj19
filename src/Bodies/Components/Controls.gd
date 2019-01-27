@@ -3,12 +3,17 @@ extends Node
 const Physics = preload("res://Bodies/Physics.gd")
 
 onready var textbox = get_node("/root/Hud/TextBox")
+onready var player_input = get_node("/root/PlayerInput")
 
 var active = true
 
 func _ready():
 	textbox.connect("dialogue_started", self, "disable_action")
 	textbox.connect("dialogue_finished", self, "enable_action")
+	player_input.register_player(get_parent())
+
+func _exit_tree():
+	player_input.deregister_player()
 
 func _physics_process(delta):
 	if active:

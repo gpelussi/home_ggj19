@@ -20,9 +20,8 @@
 [ext_resource path="res://Database/Items/Chainsaw.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Database/Items/Chestnut.tscn" type="PackedScene" id=19]
 
-[node name="Database" type="Node2D" index="0"]
+[node name="Database" type="Node2D"]
 
-editor/display_folded = true
 visible = false
 script = ExtResource( 1 )
 

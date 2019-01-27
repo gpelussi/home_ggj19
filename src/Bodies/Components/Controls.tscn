@@ -2,8 +2,6 @@
 
 [ext_resource path="res://Bodies/Components/Controls.gd" type="Script" id=1]
 
-
-
 [node name="Controls" type="Node" index="0"]
 
 script = ExtResource( 1 )
