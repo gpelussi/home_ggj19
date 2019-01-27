@@ -23,9 +23,6 @@ shape = SubResource( 1 )
 [node name="InteractionEvent" parent="Interaction" index="1" instance=ExtResource( 2 )]
 
 text_default = "ASKJDLAFKJ"
-item_given_on_first_text = "Chainsaw"
-item_given_on_second_text = ""
-item_given_on_third_text = ""
 
 [node name="Sprite" parent="." index="2" instance=ExtResource( 3 )]
 
