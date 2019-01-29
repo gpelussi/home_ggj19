@@ -14,7 +14,6 @@ func _ready():
 
 func run_dialogue(text):
 	emit_signal("dialogue_started")
-	print(text)
 	var box_texts = text.split("\n\n")
 	show()
 	for box_text in box_texts:

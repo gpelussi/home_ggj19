@@ -8,27 +8,34 @@ onready var textbox = get_node("/root/Hud/TextBox")
 onready var player_input = get_node("/root/PlayerInput")
 onready var screen_screamer = get_node("/root/ScreenScreamer")
 
-
-var run_recursive = true
+var force_quit = false
 var idx = 0
 
 func action():
 	pass
 
 func run():
-	print("running %s" % get_name())
-	action()
-	if not run_recursive:
-		return
-	print("action done, running recursively")
+	print("Running [%s]" % self.name)
+	force_quit = false
 	idx = 0
-	next()
+	action()
+	run_all()
 
-func next():
+func run_all():
+	if force_quit:
+		return
 	if idx >= get_child_count():
-		emit_signal("command_done")
+		finish()
 		return
 	var command = get_child(idx)
-	idx += 1
 	command.connect("command_done", self, "next", [], CONNECT_ONESHOT)
 	command.run()
+
+func next():
+	idx += idx
+	run_all()
+
+func finish():
+	print("Finishing [%s]" % self.name)
+	force_quit = true
+	emit_signal("command_done")

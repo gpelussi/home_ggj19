@@ -5,7 +5,7 @@ onready var player_input = get_node("/root/PlayerInput")
 var current = 0
 
 func try_to_trigger():
-	print("interact with %s" % get_parent().get_parent().name)
+	print("Interacting with %s" % get_npc_name())
 	player_input.lock_input()
 	current = 0
 	run_next_command()
@@ -17,8 +17,9 @@ func run_next_command():
 	var commands = get_children()
 	if current >= get_child_count():
 		player_input.unlock_input()
-		print("commands done")
+		print("All commands done.")
 		return
+	print("Running next command...")
 	var command = get_child(current)
 	command.connect("command_done", self, "next_command", [], CONNECT_ONESHOT)
 	command.run()
