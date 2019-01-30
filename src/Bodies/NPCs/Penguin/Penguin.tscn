@@ -2,12 +2,11 @@
 
 [ext_resource path="res://Bodies/NPCs/NPC.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Bodies/Components/InteractionEvent.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Commands/TextBox.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Commands/Condition.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Commands/Condition.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Commands/TextBox.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Commands/GiftItem.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Commands/AwardItem.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Bodies/NPCs/Penguin/Sprite.tscn" type="PackedScene" id=7]
-
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -27,18 +26,66 @@ shape = SubResource( 1 )
 
 [node name="InteractionEvent" parent="Interaction" index="1" instance=ExtResource( 2 )]
 
-[node name="TextBox" parent="Interaction/InteractionEvent" index="0" instance=ExtResource( 3 )]
+[node name="CheckKatana" parent="Interaction/InteractionEvent" index="0" instance=ExtResource( 3 )]
 
-dialogue_text = "Penguin: If you see the merchant, ask about my delivery!
+editor/display_folded = true
+check_if_player_has_item = 1
+has_item = "Katana"
+check_if_npc_has_item = 1
+npc_which = "Penguin"
+npc_which_item = "Calculator"
+
+[node name="TextBox" parent="Interaction/InteractionEvent/CheckKatana" index="0" instance=ExtResource( 4 )]
+
+dialogue_text = "Penguin: Yeaaaaaaaaaa! Look who’s back! 
+
+Player: It’s me! Long time no see! 
+
+Penguin: Ya bet. And I see you got that Katana I asked you about! 
+
+Penguin: Man, u the best buddy ever.
+
+Player: It’s yours. Have fun with your sushi now! 
+
+Penguin: Maaan, the show I’m gonna put on cutting sushi with this new babe. 
+
+Penguin: Oh! Have this. Its the finest fish there ever was. 
+
+Player: Oh! Really?
+
+Penguin: They’re known for their unique flavor, 
+
+Penguin: one that makes everyone remember home.  My fave ingredient.
+
+Player: Cool… I might have just the use for it.
+
+Player: Can I maybe… take one of those flowers you have around? 
+
+Penguin: Flowers? Wha- Oh. Oh, sure. These aren’t even mine to keep, bro. 
 "
 
-[node name="Condition" parent="Interaction/InteractionEvent" index="1" instance=ExtResource( 4 )]
+[node name="GiveKatanaToPenguin" parent="Interaction/InteractionEvent/CheckKatana" index="1" instance=ExtResource( 5 )]
+
+item_to_give = "Katana"
+who_to_give_item_to = "Penguin"
+
+[node name="AwardFish" parent="Interaction/InteractionEvent/CheckKatana" index="2" instance=ExtResource( 6 )]
+
+item_to_give = "Fish"
+
+[node name="AwardFlower" parent="Interaction/InteractionEvent/CheckKatana" index="3" instance=ExtResource( 6 )]
+
+item_to_give = "Flower"
+
+[node name="CheckCalculator" parent="Interaction/InteractionEvent" index="1" instance=ExtResource( 3 )]
 
 check_if_player_has_item = 1
 has_item = "Calculator"
-check_if_npc_has_item = 0
+check_if_npc_has_item = 2
+npc_which = "Penguin"
+npc_which_item = "Calculator"
 
-[node name="TextBox2" parent="Interaction/InteractionEvent/Condition" index="0" instance=ExtResource( 3 )]
+[node name="TextBox" parent="Interaction/InteractionEvent/CheckCalculator" index="0" instance=ExtResource( 4 )]
 
 dialogue_text = "Penguin: 'Sup. You here to taste my delicious sushi, bro? 
 
@@ -75,52 +122,22 @@ Penguin:Best way to feel like home is by tasting its flavor.
 Penguin: But yea, anyways, tell Beetle I sent hello.
 "
 
-[node name="Condition2" parent="Interaction/InteractionEvent" index="2" instance=ExtResource( 4 )]
+[node name="GiftItem" parent="Interaction/InteractionEvent/CheckCalculator" index="1" instance=ExtResource( 5 )]
 
-check_if_player_has_item = 1
-has_item = "Katana"
-check_if_npc_has_item = 0
-
-[node name="GiftItem" parent="Interaction/InteractionEvent/Condition2" index="0" instance=ExtResource( 5 )]
-
-item_to_give = "Katana"
+item_to_give = "Calculator"
 who_to_give_item_to = "Penguin"
 
-[node name="AwardItem" parent="Interaction/InteractionEvent/Condition2" index="1" instance=ExtResource( 6 )]
+[node name="IsStranger" parent="Interaction/InteractionEvent" index="2" instance=ExtResource( 3 )]
 
-item_to_give = "Fish"
+check_if_player_has_item = 2
+has_item = "Calculator"
+check_if_npc_has_item = 2
+npc_which = "Penguin"
+npc_which_item = "Calculator"
 
-[node name="AwardItem2" parent="Interaction/InteractionEvent/Condition2" index="2" instance=ExtResource( 6 )]
+[node name="TextBox" parent="Interaction/InteractionEvent/IsStranger" index="0" instance=ExtResource( 4 )]
 
-item_to_give = "Flower"
-
-[node name="TextBox" parent="Interaction/InteractionEvent/Condition2" index="3" instance=ExtResource( 3 )]
-
-dialogue_text = "Penguin: Yeaaaaaaaaaa! Look who’s back! 
-
-Player: It’s me! Long time no see! 
-
-Penguin: Ya bet. And I see you got that Katana I asked you about! 
-
-Penguin: Man, u the best buddy ever.
-
-Player: It’s yours. Have fun with your sushi now! 
-
-Penguin: Maaan, the show I’m gonna put on cutting sushi with this new babe. 
-
-Penguin: Oh! Have this. Its the finest fish there ever was. 
-
-Player: Oh! Really?
-
-Penguin: They’re known for their unique flavor, 
-
-Penguin: one that makes everyone remember home.  My fave ingredient.
-
-Player: Cool… I might have just the use for it.
-
-Player: Can I maybe… take one of those flowers you have around? 
-
-Penguin: Flowers? Wha- Oh. Oh, sure. These aren’t even mine to keep, bro. 
+dialogue_text = "Penguin: If you see the merchant, ask about my delivery!
 "
 
 [node name="Sprite" parent="." index="3" instance=ExtResource( 7 )]

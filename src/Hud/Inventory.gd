@@ -28,6 +28,8 @@ func remove_item(item):
 	if has_node(item):
 		var icon = get_node(item)
 		icon.queue_free()
+	else:
+		print("No such item to remove: %s" % item)
 
 func screen_changed():
 	show()

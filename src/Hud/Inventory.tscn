@@ -3,7 +3,7 @@
 [ext_resource path="res://Assets/Sprites/Hud/fuck.png" type="Texture" id=1]
 [ext_resource path="res://Hud/Inventory.gd" type="Script" id=2]
 
-[node name="Inventory" type="TextureRect" index="0"]
+[node name="Inventory" type="TextureRect"]
 
 anchor_left = 0.0
 anchor_top = 0.0
