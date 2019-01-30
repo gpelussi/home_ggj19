@@ -2,11 +2,12 @@
 
 [ext_resource path="res://Bodies/NPCs/NPC.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Bodies/Components/InteractionEvent.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Bodies/Components/Commands/TextBox.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Bodies/Components/Commands/Condition.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Bodies/Components/Commands/AwardItem.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Bodies/Components/Commands/GiftItem.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Commands/TextBox.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Commands/Condition.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Commands/AwardItem.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Commands/GiftItem.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Bodies/NPCs/Frozen/Sprite.tscn" type="PackedScene" id=7]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 
