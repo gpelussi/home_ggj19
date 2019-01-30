@@ -19,7 +19,6 @@ func run():
 	force_quit = false
 	idx = 0
 	action()
-	run_all()
 
 func run_all():
 	if force_quit:
@@ -28,11 +27,14 @@ func run_all():
 		finish()
 		return
 	var command = get_child(idx)
+	print("Connecting [%s] to [%s]" % [command.name, self.name])
 	command.connect("command_done", self, "next", [], CONNECT_ONESHOT)
+	yield(get_tree(), "idle_frame")
 	command.run()
 
 func next():
-	idx += idx
+	print("Disconnecting [%s] from [%s]" % [get_child(idx).name, self.name])
+	idx += 1
 	run_all()
 
 func finish():

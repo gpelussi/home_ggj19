@@ -12,23 +12,22 @@ export(String) var npc_which = ""
 export(String) var npc_which_item = ""
 
 func action():
-	if check_if_player_has_item > 0:
-		if inventory.has_item(has_item):
-			print("player has %s!" % has_item)
-			if check_if_player_has_item == CHECK_FALSE:
-				finish()
-				return
-		else:
-			print("player does not have %s!" % has_item)
-			if check_if_player_has_item == CHECK_TRUE:
-				finish()
-				return
-	if check_if_npc_has_item > 0:
-		if inventory.npc_has_item(npc_which, npc_which_item):
-			if check_if_npc_has_item == CHECK_FALSE:
-				finish()
-				return
-		else:
-			if check_if_npc_has_item == CHECK_TRUE:
-				finish()
-				return
+	match check_if_player_has_item:
+		NO_CHECK:
+			pass
+		CHECK_TRUE:
+			if not inventory.has_item(has_item):
+				return finish()
+		CHECK_FALSE:
+			if inventory.has_item(has_item):
+				return finish()
+	match check_if_npc_has_item:
+		NO_CHECK:
+			pass
+		CHECK_TRUE:
+			if not inventory.npc_has_item(npc_which, npc_which_item):
+				return finish()
+		CHECK_FALSE:
+			if inventory.npc_has_item(npc_which, npc_which_item):
+				return finish()
+	run_all()

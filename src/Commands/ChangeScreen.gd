@@ -1,4 +1,4 @@
-extends "res://Bodies/Components/Commands/Command.gd"
+extends "Command.gd"
 
 export(String, FILE) var screen_path
 

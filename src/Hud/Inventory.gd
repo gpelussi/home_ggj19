@@ -7,8 +7,8 @@ onready var screen_screamer = get_node("/root/ScreenScreamer")
 onready var player_input = get_node("/root/PlayerInput")
 
 func _ready():
-	persistence.connect("item_awarded", self, "bling_item")
-	persistence.connect("item_given", self, "unbling_item")
+	persistence.connect("item_awarded", self, "add_item")
+	persistence.connect("item_given", self, "remove_item")
 	screen_screamer.connect("set_screen", self, "screen_changed")
 	hide()
 
@@ -19,18 +19,12 @@ func update_children_position():
 		child.position.y = 24
 		idx += 1
 
-func bling_item(item):
-	print("awarding item: %s" % item)
+func add_item(item):
 	var icon = database.instance_item_icon(item)
 	add_child(icon)
 	update_children_position()
-	player_input.stop()
-	player_input.fanfare()
-	text_box.run_dialogue("You gained %s!" % item)
-	yield(text_box, "dialogue_finished")
-	player_input.stop()
 
-func unbling_item(item):
+func remove_item(item):
 	if has_node(item):
 		var icon = get_node(item)
 		icon.queue_free()
