@@ -34,7 +34,7 @@ dialogue_text = "Cultist: Come here Reptiles… I need thee...
 [node name="Condition" parent="Interaction/InteractionEvent" index="1" instance=ExtResource( 4 )]
 
 check_if_player_has_item = 1
-has_item = "Mask"
+has_item = "Gecko"
 check_if_npc_has_item = 0
 
 [node name="TextBox" parent="Interaction/InteractionEvent/Condition" index="0" instance=ExtResource( 3 )]
@@ -64,7 +64,7 @@ Cultist: Now… where could I find something to draw patterns on this volatile s
 
 [node name="GiftItem" parent="Interaction/InteractionEvent/Condition" index="1" instance=ExtResource( 5 )]
 
-item_to_give = "Mask"
+item_to_give = "Gecko"
 who_to_give_item_to = "Cthulu"
 
 [node name="AwardItem" parent="Interaction/InteractionEvent/Condition" index="2" instance=ExtResource( 6 )]

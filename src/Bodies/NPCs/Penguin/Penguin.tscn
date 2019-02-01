@@ -28,7 +28,6 @@ shape = SubResource( 1 )
 
 [node name="CheckKatana" parent="Interaction/InteractionEvent" index="0" instance=ExtResource( 3 )]
 
-editor/display_folded = true
 check_if_player_has_item = 1
 has_item = "Katana"
 check_if_npc_has_item = 1
@@ -79,6 +78,7 @@ item_to_give = "Flower"
 
 [node name="CheckCalculator" parent="Interaction/InteractionEvent" index="1" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 check_if_player_has_item = 1
 has_item = "Calculator"
 check_if_npc_has_item = 2
@@ -129,6 +129,7 @@ who_to_give_item_to = "Penguin"
 
 [node name="IsStranger" parent="Interaction/InteractionEvent" index="2" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 check_if_player_has_item = 2
 has_item = "Calculator"
 check_if_npc_has_item = 2

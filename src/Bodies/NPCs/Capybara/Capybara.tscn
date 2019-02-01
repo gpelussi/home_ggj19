@@ -40,7 +40,6 @@ check_if_npc_has_item = 0
 [node name="TextBox" parent="Interaction/InteractionEvent/Condition" index="0" instance=ExtResource( 3 )]
 
 dialogue_text = "Samurai: It is just like this one. 
-
 Player: What? The mirror?
 
 Samurai: Yes. It’s exactly the one my beloved Yuki adored, 

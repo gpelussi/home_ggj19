@@ -33,6 +33,7 @@ dialogue_text = "Squirrel: I wish I could learn from other worlds...
 
 [node name="Condition" parent="Interaction/InteractionEvent" index="1" instance=ExtResource( 4 )]
 
+editor/display_folded = true
 check_if_player_has_item = 1
 has_item = "Book"
 check_if_npc_has_item = 0

@@ -36,7 +36,6 @@ npc_which_item = "Saw"
 
 [node name="HasMask" parent="Interaction/InteractionEvent/HasChainsaw" index="0" instance=ExtResource( 3 )]
 
-editor/display_folded = true
 check_if_player_has_item = 1
 has_item = "Mask"
 check_if_npc_has_item = 2

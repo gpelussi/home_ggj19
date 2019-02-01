@@ -33,6 +33,7 @@ dialogue_text = "Frozen: My costume! I need something to wear!
 
 [node name="Condition" parent="Interaction/InteractionEvent" index="1" instance=ExtResource( 4 )]
 
+editor/display_folded = true
 check_if_player_has_item = 1
 has_item = "Kigurumi"
 check_if_npc_has_item = 0

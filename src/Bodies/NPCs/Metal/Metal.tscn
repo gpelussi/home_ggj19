@@ -8,13 +8,12 @@
 [ext_resource path="res://Commands/AwardItem.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Bodies/NPCs/Metal/Sprite.tscn" type="PackedScene" id=7]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 20, 20 )
 
-[node name="Metal" index="0" instance=ExtResource( 1 )]
+[node name="Metal" instance=ExtResource( 1 )]
 
 [node name="HitBox" parent="." index="0"]
 
