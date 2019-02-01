@@ -13,7 +13,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 16, 16 )
 
-[node name="Beetle" index="0" instance=ExtResource( 1 )]
+[node name="Beetle" instance=ExtResource( 1 )]
 
 [node name="HitBox" parent="." index="0"]
 
@@ -124,7 +124,6 @@ npc_which_item = "NegativeCalculator"
 [node name="TextBox" parent="Interaction/InteractionEvent/HasGivenCalculator" index="0" instance=ExtResource( 4 )]
 
 dialogue_text = "Beetle: You zeem new around here. Wanna buy zome zouvenirz?
-
 Player: I am! I'm looking for a place to stay. 
 
 Player: But I don't know if I have this planet's currency. 

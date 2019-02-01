@@ -8,13 +8,12 @@
 [ext_resource path="res://Commands/AwardItem.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Bodies/NPCs/Squirrel/Sprite.tscn" type="PackedScene" id=7]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 20, 10 )
 
-[node name="Squirrel" index="0" instance=ExtResource( 1 )]
+[node name="Squirrel" instance=ExtResource( 1 )]
 
 [node name="HitBox" parent="." index="0"]
 
@@ -34,12 +33,14 @@ dialogue_text = "Squirrel: I wish I could learn from other worlds...
 
 [node name="Condition" parent="Interaction/InteractionEvent" index="1" instance=ExtResource( 4 )]
 
-editor/display_folded = true
 check_if_player_has_item = 1
 has_item = "Book"
 check_if_npc_has_item = 0
 
 [node name="GiftItem" parent="Interaction/InteractionEvent/Condition" index="0" instance=ExtResource( 5 )]
+
+item_to_give = "Book"
+who_to_give_item_to = "Squirrel"
 
 [node name="AwardItem" parent="Interaction/InteractionEvent/Condition" index="1" instance=ExtResource( 6 )]
 
