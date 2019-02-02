@@ -8,7 +8,6 @@
 [ext_resource path="res://Commands/AwardItem.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Bodies/NPCs/Fox/Sprite.tscn" type="PackedScene" id=7]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
@@ -34,6 +33,7 @@ dialogue_text = "Player: This fox is looking at a pile of dirt on the ground.
 
 [node name="Condition" parent="Interaction/InteractionEvent" index="1" instance=ExtResource( 4 )]
 
+editor/display_folded = true
 check_if_player_has_item = 1
 has_item = "Shovel"
 check_if_npc_has_item = 0
