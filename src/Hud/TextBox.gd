@@ -1,5 +1,8 @@
 extends NinePatchRect
 
+const CR_STR = "\r"
+const SPLIT_SUBSTR = "\n\n"
+
 onready var label = get_node("Label")
 onready var timer = get_node("Timer")
 
@@ -7,14 +10,14 @@ signal dialogue_started
 signal dialogue_finished
 signal dialogue_advanced
 
-
 func _ready():
 	set_process_input(false)
 	hide()
 
 func run_dialogue(raw_script):
 	emit_signal("dialogue_started")
-	var box_texts = raw_script.split("\n\n")
+	var treated_script = raw_script.replace(CR_STR, "")
+	var box_texts = treated_script.split(SPLIT_SUBSTR)
 	var idx = 0
 	show()
 	next_line(box_texts, 0)
